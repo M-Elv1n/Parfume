@@ -1,0 +1,15 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    a{
+        padding: 10px 20px;
+        border: 1px solid black;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+    }
+}
