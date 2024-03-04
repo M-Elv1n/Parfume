@@ -1,0 +1,64 @@
+.woman .old-price {
+  text-decoration: line-through red;
+}
+.woman a {
+  padding: 10px 50px;
+  border: 1px solid black;
+  color: black;
+}
+.woman a:hover {
+  transition: 0.3s;
+  background-color: black;
+  color: white;
+}
+.woman h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+.woman__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+.woman__container img {
+  width: 200px;
+  height: 200px;
+}
+.woman__container .new-price {
+  font-size: 25px;
+  padding: 10px;
+}
+.woman__container .old-price {
+  font-size: 22px;
+}
+.woman__container .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.woman__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.woman__number button {
+  padding: 10px;
+  cursor: pointer;
+}
+.woman__product {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 50px;
+  grid-gap: 10px;
+}
+.woman__product--detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=productlistwoman.css.map */

@@ -31,11 +31,11 @@
 
 // export default ProductDetails;
 
-
-
 import React from "react";
 import { useParams } from "react-router-dom";
-import productsData from "../Man/products.json";
+import productsData from "../../../../data/products.json";
+import "./css/productlistman.scss";
+import { Link } from "react-router-dom";
 
 function ProductDetails() {
   const { id } = useParams();
@@ -46,11 +46,17 @@ function ProductDetails() {
   }
 
   return (
-    <div>
-      <h2>{product.name}</h2>
-      <p>Description: {product.description}</p>
-      <p>Price: {product.price}</p>
-      {/* Добавьте другие детали продукта, если необходимо */}
+    <div className="man__product--detail__container">
+      <Link to="/">
+        <h3 className="back">Esas Seyfe</h3>
+      </Link>
+      <div className="container man__product--detail">
+        {console.log(product)}
+        <img src={`../../${product.image}`} alt={product.name} />
+        <h2>{product.name}</h2>
+        <p>{product.description}</p>
+        <p>{product.price}azn</p>
+      </div>
     </div>
   );
 }

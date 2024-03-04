@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import productsData from "../../../../data/products.json";
-import "./css/productlistman.scss";
+import "./css/productlistwoman.scss";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -26,8 +26,7 @@ function ProductList() {
 
   const renderProducts = currentProducts.map((product) => (
     <li key={product.id} className="container">
-      <div className="man__container">
-        {/* <img src={require(product.image)} alt={product.name} /> */}
+      <div className="woman__container">
         <img src={product.image} alt={product.name} />
         <h2 className="">{product.name}</h2>
         <div className="price">
@@ -36,7 +35,6 @@ function ProductList() {
             {(product.price / 0.6).toFixed(0)}.99azn
           </h4>
         </div>
-        {/* <Link to={`/product/${product.id}`}>Details</Link> */}
         <Link
           to={`https://wa.me/+994552166694?text=Здравствуйте, я заинтересован в продукте ${encodeURIComponent(
             product.name
@@ -48,17 +46,6 @@ function ProductList() {
         >
           Sifariş et
         </Link>
-        {/* <Link
-          to={`https://wa.me/+994552166694?text=Здравствуйте, я заинтересован в продукте ${encodeURIComponent(
-            product.name
-          )}, цена: ${product.price}. Подробнее: ${window.location.origin}${
-            window.location.pathname
-          }`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Отправить сообщение
-        </Link> */}
       </div>
     </li>
   ));
@@ -76,15 +63,12 @@ function ProductList() {
   ));
 
   return (
-    <div className="">
-      <Link to='/'><h3 className="back">Esas Seyfe</h3></Link>
-      <div className="container man">
-        <h1>Kişi ətirləri</h1>
-        <ul className="man__product">{renderProducts}</ul>
-        <ul id="page-numbers" className="container man__number">
-          {renderPageNumbers}
-        </ul>
-      </div>
+    <div className="container woman">
+      <h1>Kişi ətirləri</h1>
+      <ul className="woman__product">{renderProducts}</ul>
+      <ul id="page-numbers" className="container woman__number">
+        {renderPageNumbers}
+      </ul>
     </div>
   );
 }

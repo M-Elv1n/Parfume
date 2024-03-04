@@ -1,4 +1,4 @@
-.man {
+.woman {
   .old-price {
     text-decoration: line-through red;
   }
@@ -49,7 +49,7 @@
     justify-content: center;
     gap: 10px;
     button {
-      padding: 16px;
+      padding: 10px;
       cursor: pointer;
     }
   }
@@ -63,72 +63,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      &__container{
-        height: 100vh;
-      }
-      h2{
-        font-size: 36px;
-      }
-      p{
-        font-size: 20px;
-      }
-      img{
-        width: 300px;
-      }
-    }
-  }
-
-  @media screen and (max-width: (1400px)) {
-  }
-  @media screen and (max-width: (1200px)) {
-    &__product {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  @media screen and (max-width: (991px)) {
-  }
-  @media screen and (max-width: (767px)) {
-    &__product {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media screen and (max-width: (567px)) {
-    &__container {
-      gap: 0;
-      h2 {
-        font-size: 25px;
-      }
-      .new-price {
-        font-size: 18px;
-      }
-      .old-price {
-        font-size: 15px;
-      }
-      a {
-        padding: 7px 33px;
-      }
-      img {
-        width: 160px;
-        height: 153px;
-      }
-    }
-    &__product {
-      gap: 0;
-    }
-  }
-}
-
-.back {
-  padding-top: 10px;
-  padding-left: 10px;
-  &::before {
-    content: "<<<";
-    padding-right: 10px;
-  }
-  @media screen and (max-width: (567px)) {
-    padding-left: 20px;
-    &::before {
-      padding-right: 4px;
     }
   }
 }
