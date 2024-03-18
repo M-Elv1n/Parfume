@@ -14,6 +14,7 @@
 .woman h1 {
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 30px;
 }
 .woman__container {
   display: flex;
@@ -47,7 +48,7 @@
   gap: 10px;
 }
 .woman__number button {
-  padding: 10px;
+  padding: 16px;
   cursor: pointer;
 }
 .woman__product {
@@ -61,4 +62,67 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.woman__product--detail__container {
+  height: 100vh;
+}
+.woman__product--detail h2 {
+  font-size: 36px;
+}
+.woman__product--detail p {
+  font-size: 20px;
+}
+.woman__product--detail img {
+  width: 300px;
+}
+@media screen and (max-width: 1200px) {
+  .woman__product {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  .woman__product {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 567px) {
+  .woman__container {
+    gap: 0;
+  }
+  .woman__container h2 {
+    font-size: 25px;
+  }
+  .woman__container .new-price {
+    font-size: 18px;
+  }
+  .woman__container .old-price {
+    font-size: 15px;
+  }
+  .woman__container a {
+    padding: 7px 33px;
+  }
+  .woman__container img {
+    width: 160px;
+    height: 153px;
+  }
+  .woman__product {
+    row-gap: 34px;
+  }
+}
+
+.back {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.back::before {
+  content: "<<<";
+  padding-right: 10px;
+}
+@media screen and (max-width: 567px) {
+  .back {
+    padding-left: 20px;
+  }
+  .back::before {
+    padding-right: 4px;
+  }
 }/*# sourceMappingURL=productlistwoman.css.map */

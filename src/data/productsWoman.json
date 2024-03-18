@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "name": "Armani Si passione",
+        "image": "./img/women/1.jpeg",
+        "price": 79,
+        "oldprice": 230
+    },
+    {
+        "id": 2,
+        "name": "Armani Rouge Malachite",
+        "image": "./img/women/2.jpeg",
+        "price": 99,
+        "oldprice": 620
+    },
+    {
+        "id": 3,
+        "name": "Narciso Rodriguez for her",
+        "image": "./img/women/3.jpeg",
+        "price": 89,
+        "oldprice": 220
+    },
+    {
+        "id": 4,
+        "name": "Narciso",
+        "image": "./img/women/4.jpeg",
+        "price": 79,
+        "oldprice": 210
+    },
+    {
+        "id": 5,
+        "name": "Delina Royal Essence",
+        "image": "./img/women/5.jpeg",
+        "price": 119,
+        "oldprice": 610
+    },
+    {
+        "id": 6,
+        "name": "Tom Ford Lost Cherry",
+        "image": "./img/women/6.jpeg",
+        "price": 89,
+        "oldprice": 675
+    },
+    {
+        "id": 7,
+        "name": "Ormonde Jayne",
+        "image": "./img/women/7.jpeg",
+        "price": 129,
+        "oldprice": 620
+    },
+    {
+        "id": 8,
+        "name": "Tom Ford Lost Cherry",
+        "image": "./img/women/8.jpeg",
+        "price": 89,
+        "oldprice": 675
+    },
+    {
+        "id": 9,
+        "name": "Miss Dior",
+        "image": "./img/women/9.jpeg",
+        "price": 79,
+        "oldprice": 210
+    },
+    {
+        "id": 10,
+        "name": "Tom Ford Cafe Rose",
+        "image": "./img/women/10.jpeg",
+        "price": 129,
+        "oldprice": 700
+    },
+    {
+        "id": 11,
+        "name": "Cartier Oud & Pink",
+        "image": "./img/women/11.jpeg",
+        "price": 119,
+        "oldprice": 720
+    },
+    {
+        "id": 12,
+        "name": "Armani The Yulong",
+        "image": "./img/women/12.jpeg",
+        "price": 89,
+        "oldprice": 230
+    },
+    {
+        "id": 13,
+        "name": "Fleur DE Sable",
+        "image": "./img/women/13.jpeg",
+        "price": 129,
+        "oldprice": 690
+    },
+    {
+        "id": 14,
+        "name": "Gucci Flora",
+        "image": "./img/women/14.jpeg",
+        "price": 89,
+        "oldprice": 230
+    },
+    {
+        "id": 15,
+        "name": "Loewe Aura",
+        "image": "./img/women/15.jpeg",
+        "price": 99,
+        "oldprice": 230
+    },
+    {
+        "id": 16,
+        "name": "My Burberry",
+        "image": "./img/women/16.jpeg",
+        "price": 79,
+        "oldprice": 190
+    },
+    {
+        "id": 17,
+        "name": "Tiziana Terenzi Telea",
+        "image": "./img/women/17.jpeg",
+        "price": 129,
+        "oldprice": 710
+    },
+    {
+        "id": 18,
+        "name": "Narciso",
+        "image": "./img/women/18.jpeg",
+        "price": 79,
+        "oldprice": 210
+    },
+    {
+        "id": 19,
+        "name": "Kilin Goof girl gone Bad",
+        "image": "./img/women/19.jpeg",
+        "price": 129,
+        "oldprice": 520
+    },
+    {
+        "id": 20,
+        "name": "Kajal",
+        "image": "./img/women/1.jpeg",
+        "price": 129,
+        "oldprice": 680
+    }
+]

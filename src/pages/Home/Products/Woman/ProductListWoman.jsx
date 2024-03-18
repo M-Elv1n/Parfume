@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import productsData from "../../../../data/products.json";
+import productsData from "../../../../data/productsWoman.json";
 import "./css/productlistwoman.scss";
 
-function ProductList() {
+function ProductListWomen() {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 10; // Количество продуктов на одной странице
@@ -28,19 +28,17 @@ function ProductList() {
     <li key={product.id} className="container">
       <div className="woman__container">
         <img src={product.image} alt={product.name} />
-        <h2 className="">{product.name}</h2>
+        <p className="">{product.name}</p>
         <div className="price">
-          <h4 className="new-price">{product.price}azn</h4>
-          <h4 className="old-price">
-            {(product.price / 0.6).toFixed(0)}.99azn
-          </h4>
+          <p className="new-price">{product.price}azn</p>
+          <p className="old-price">{product.oldprice}azn</p>
         </div>
         <Link
-          to={`https://wa.me/+994552166694?text=Здравствуйте, я заинтересован в продукте ${encodeURIComponent(
+          to={`https://wa.me/+994552166694?text=Salam,maraqlandığım məhsul - ${encodeURIComponent(
             product.name
-          )}, цена: ${product.price}. Подробнее: ${
+          )}, qiymət: ${product.price}azn. Daha ətraflı: ${
             window.location.origin
-          }/product/${product.id}`}
+          }/qadin-etirleri/${product.name.toLowerCase().replace(/\s+/g, "-")}`}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -63,14 +61,19 @@ function ProductList() {
   ));
 
   return (
-    <div className="container woman">
-      <h1>Kişi ətirləri</h1>
-      <ul className="woman__product">{renderProducts}</ul>
-      <ul id="page-numbers" className="container woman__number">
-        {renderPageNumbers}
-      </ul>
+    <div className="">
+      <Link to="/">
+        <h3 className="back">Əsas Səhifə</h3>
+      </Link>
+      <div className="container woman">
+        <p className="woman__title">Qadın ətirləri</p>
+        <ul className="woman__product">{renderProducts}</ul>
+        <ul id="page-numbers" className="container woman__number">
+          {renderPageNumbers}
+        </ul>
+      </div>
     </div>
   );
 }
 
-export default ProductList;
+export default ProductListWomen;

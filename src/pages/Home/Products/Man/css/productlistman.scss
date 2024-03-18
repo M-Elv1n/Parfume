@@ -1,22 +1,30 @@
 .man {
   .old-price {
-    text-decoration: line-through red;
+    text-decoration: line-through #888;
+    color: #888;
   }
   a {
     padding: 10px 50px;
-    border: 1px solid black;
     color: black;
+    background-color: #f7b538;
+    font-weight: 600;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
     &:hover {
       transition: 0.3s;
-      background-color: black;
+      background-color: rgb(234, 220, 68);
       color: white;
     }
   }
-  h1 {
+  &__title {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 26px;
+    margin-bottom: 85px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 31px;
   }
   &__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,19 +71,68 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      &__container{
+      &__container {
         height: 100vh;
       }
-      h2{
+      h2 {
         font-size: 36px;
       }
-      p{
+      p {
         font-size: 20px;
       }
-      img{
+      img {
         width: 300px;
       }
     }
+  }
+
+  //discound
+  .discount_tag.label_style_2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    padding: 0 0 10px;
+  }
+  .discount_tag.label_style_2 .discount_tag_graphics {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 10px;
+  }
+  .discount_tag.label_style_2 .discount_tag_graphics:before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid #AE2238;
+    border-left: 20px solid transparent;
+  }
+  .discount_tag.label_style_2 .discount_tag_graphics:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid #AE2238;
+    border-right: 20px solid transparent;
+  }
+  .discount_tag.label_style_2 .discount_tag_graphics {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 10px;
+  }
+  .discount_tag.label_style_2 .discount_tag_name {
+    width: 40px;
+    text-align: center;
+    background: #AE2238;
+    padding: 10px 0;
   }
 
   @media screen and (max-width: (1400px)) {

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function AddProduct({ addProduct }) {
+function AddProductWomen({ addProductWomen }) {
   const [productName, setProductName] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addProduct(productName);
+    addProductWomen(productName);
     setProductName("");
     navigate("/");
   };
@@ -27,4 +27,4 @@ function AddProduct({ addProduct }) {
   );
 }
 
-export default AddProduct;
+export default AddProductWomen;

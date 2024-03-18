@@ -4,6 +4,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Montserrat", sans-serif;
+
+  p {
+    font-size: 31px;
+  }
   .logo {
     width: 89%;
     height: 468px;
@@ -17,13 +22,19 @@
   }
   a {
     padding: 10px 50px;
-    border: 1px solid black;
+    // border: 1px solid black;
     color: black;
-    font-size: 22px;
-    font-weight: bolder;
+    // font-size: 22px;
+    // font-weight: bolder;
+
+    background-color: #f7b538;
+    font-weight: 600;
+    border-radius: 8px;
+    font-family: "Montserrat", sans-serif;
     &:hover {
       transition: 0.3s;
-      background-color: black;
+      // background-color: black;
+      background-color: rgb(234, 220, 68);
       color: white;
     }
   }
@@ -38,45 +49,64 @@
   }
   &__container {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    gap: 10px;
     h2 {
       font-size: 60px;
       letter-spacing: 3px;
     }
   }
   &__women {
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 10px;
+    // padding-left: 30px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // gap: 30px;
+    // padding: 10px;
+    // background-image: url(../../../../public/img/home/woman.jpeg);
+    // background-repeat: no-repeat;
+    // background-position: right;
+    // background-size: 600px 685px;
+    color: red;
     width: 600px;
     height: 600px;
-    background-image: url(../../../../public/img/home/woman.jpeg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 600px 685px;
+    position: relative;
+    &--container {
+      position: absolute;
+      z-index: 100;
+      top: 141px;
+      left: 38px;
+    }
     &--text {
+      padding-bottom: 16px;
       span {
         font-size: 30px;
       }
     }
   }
   &__men {
-    padding-left: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    padding: 10px;
-    background-image: url(../../../../public/img/home/man.jpeg);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: 600px 685px;
+    // padding-left: 30px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // gap: 30px;
+    // padding: 10px;
+    // background-image: url(../../../../public/img/home/man.jpeg);
+    // background-repeat: no-repeat;
+    // background-position: left;
+    // background-size: 600px 685px;
+    color: red;
     width: 600px;
     height: 600px;
+    position: relative;
+    &--container {
+      position: absolute;
+      z-index: 100;
+      top: 141px;
+      left: 38px;
+    }
     &--text {
+      padding-bottom: 16px;
       span {
         font-size: 30px;
       }
@@ -141,6 +171,10 @@
       background-size: 402px 671px;
       width: 400px;
       padding-left: 38px;
+      &--container {
+        top: 203px;
+        left: 43px;
+      }
     }
     .logo {
       width: 100%;

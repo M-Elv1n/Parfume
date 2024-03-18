@@ -1,1 +1,146 @@
-/*# sourceMappingURL=home.css.map */
+.home {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.home .logo {
+  width: 89%;
+  height: 468px;
+}
+.home__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 78px;
+}
+.home a {
+  padding: 10px 50px;
+  border: 1px solid black;
+  color: black;
+  font-size: 22px;
+  font-weight: bolder;
+}
+.home a:hover {
+  transition: 0.3s;
+  background-color: black;
+  color: white;
+}
+.home__celebrate {
+  width: 100%;
+  height: 400px;
+  background-image: url(../../../../public/img/home/celebrate.png);
+  background-position: center;
+}
+.home__celebrate img {
+  display: none;
+}
+.home__container {
+  display: flex;
+  justify-content: space-between;
+}
+.home__container h2 {
+  font-size: 60px;
+  letter-spacing: 3px;
+}
+.home__women {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 10px;
+  width: 600px;
+  height: 600px;
+  background-image: url(../../../../public/img/home/woman.jpeg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 600px 685px;
+}
+.home__women--text span {
+  font-size: 30px;
+}
+.home__men {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 10px;
+  background-image: url(../../../../public/img/home/man.jpeg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 600px 685px;
+  width: 600px;
+  height: 600px;
+}
+.home__men--text span {
+  font-size: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .home__men {
+    width: 500px;
+  }
+  .home__women {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .home__men {
+    width: 400px;
+  }
+  .home__women {
+    width: 400px;
+    background-size: 404px 623px;
+  }
+  .home__container {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home {
+    margin-top: 20px;
+  }
+  .home__container {
+    flex-direction: column;
+  }
+  .home__men {
+    background-size: 492px 685px;
+    width: 400px;
+  }
+  .home__women {
+    background-size: 431px 671px;
+    width: 400px;
+  }
+  .home .logo {
+    width: 96%;
+  }
+  .home__celebrate {
+    background-image: none;
+    height: 95px;
+  }
+  .home__celebrate img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 567px) {
+  .home__men {
+    background-size: 452px 626px;
+    width: 400px;
+    padding-left: 38px;
+  }
+  .home__women {
+    background-size: 402px 671px;
+    width: 400px;
+    padding-left: 38px;
+  }
+  .home .logo {
+    width: 100%;
+    height: 300px;
+  }
+}/*# sourceMappingURL=home.css.map */

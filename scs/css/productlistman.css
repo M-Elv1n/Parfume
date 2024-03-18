@@ -47,7 +47,7 @@
   gap: 10px;
 }
 .man__number button {
-  padding: 10px;
+  padding: 16px;
   cursor: pointer;
 }
 .man__product {
@@ -61,4 +61,67 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.man__product--detail__container {
+  height: 100vh;
+}
+.man__product--detail h2 {
+  font-size: 36px;
+}
+.man__product--detail p {
+  font-size: 20px;
+}
+.man__product--detail img {
+  width: 300px;
+}
+@media screen and (max-width: 1200px) {
+  .man__product {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  .man__product {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 567px) {
+  .man__container {
+    gap: 0;
+  }
+  .man__container h2 {
+    font-size: 25px;
+  }
+  .man__container .new-price {
+    font-size: 18px;
+  }
+  .man__container .old-price {
+    font-size: 15px;
+  }
+  .man__container a {
+    padding: 7px 33px;
+  }
+  .man__container img {
+    width: 160px;
+    height: 153px;
+  }
+  .man__product {
+    gap: 0;
+  }
+}
+
+.back {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.back::before {
+  content: "<<<";
+  padding-right: 10px;
+}
+@media screen and (max-width: 567px) {
+  .back {
+    padding-left: 20px;
+  }
+  .back::before {
+    padding-right: 4px;
+  }
 }/*# sourceMappingURL=productlistman.css.map */
