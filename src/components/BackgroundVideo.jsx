@@ -19,7 +19,7 @@ const BackgroundVideo = ({ videoSource }) => {
   }, []);
 
   return (
-    <video autoPlay loop muted ref={videoRef} style={{ width: '100%', height: '100%',}}>
+    <video autoPlay loop muted ref={videoRef}>
       <source src={videoSource} type="video/mp4" />
       Your browser does not support the video tag.
     </video>

@@ -5,14 +5,14 @@
   }
   a {
     padding: 10px 50px;
-    color: black;
-    background-color: #f7b538;
+    color: white;
+    background-color: #ae2238;
     font-weight: 600;
     border-radius: 8px;
     font-family: "Montserrat", sans-serif;
     &:hover {
       transition: 0.3s;
-      background-color: rgb(234, 220, 68);
+      background-color: #8b0000;
       color: white;
     }
   }
@@ -56,15 +56,22 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    button {
-      padding: 16px;
+    &--page {
+      padding: 10px;
       cursor: pointer;
+      font-size: 17px;
+      &:hover{
+        border: 1px solid black;
+      }
+      &.active{
+        border: 1px solid black;
+      }
     }
   }
   &__product {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     grid-gap: 10px;
     &--detail {
       display: flex;
@@ -108,7 +115,7 @@
     content: "";
     width: 0;
     height: 0;
-    border-top: 10px solid #AE2238;
+    border-top: 10px solid #ae2238;
     border-left: 20px solid transparent;
   }
   .discount_tag.label_style_2 .discount_tag_graphics:after {
@@ -118,7 +125,7 @@
     content: "";
     width: 0;
     height: 0;
-    border-top: 10px solid #AE2238;
+    border-top: 10px solid #ae2238;
     border-right: 20px solid transparent;
   }
   .discount_tag.label_style_2 .discount_tag_graphics {
@@ -131,7 +138,7 @@
   .discount_tag.label_style_2 .discount_tag_name {
     width: 40px;
     text-align: center;
-    background: #AE2238;
+    background: #ae2238;
     padding: 10px 0;
   }
 
@@ -171,21 +178,7 @@
     }
     &__product {
       gap: 0;
-    }
-  }
-}
-
-.back {
-  padding-top: 10px;
-  padding-left: 10px;
-  &::before {
-    content: "<<<";
-    padding-right: 10px;
-  }
-  @media screen and (max-width: (567px)) {
-    padding-left: 20px;
-    &::before {
-      padding-right: 4px;
+      row-gap: 23px;
     }
   }
 }

@@ -1,19 +1,21 @@
 .home {
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
-
+  video {
+    height: 100%;
+    width: 100%;
+  }
   p {
     font-size: 31px;
   }
   .logo {
-    width: 89%;
-    height: 468px;
+    margin-top: 17px;
+    width: 62%;
+    height: 287px;
   }
-  gap: 40px;
   &__title {
     display: flex;
     flex-direction: column;
@@ -38,15 +40,6 @@
       color: white;
     }
   }
-  &__celebrate {
-    width: 100%;
-    height: 400px;
-    background-image: url(../../../../public/img/home/celebrate.png);
-    background-position: center;
-    img {
-      display: none;
-    }
-  }
   &__container {
     display: flex;
     // justify-content: space-between;
@@ -69,13 +62,13 @@
     // background-size: 600px 685px;
     color: red;
     width: 600px;
-    height: 600px;
+    height: 428px;
     position: relative;
     &--container {
       position: absolute;
       z-index: 100;
-      top: 141px;
-      left: 38px;
+      top: 45px;
+      left: 19px;
     }
     &--text {
       padding-bottom: 16px;
@@ -97,13 +90,13 @@
     // background-size: 600px 685px;
     color: red;
     width: 600px;
-    height: 600px;
+    height: 428px;
     position: relative;
     &--container {
       position: absolute;
       z-index: 100;
-      top: 141px;
-      left: 38px;
+      top: 45px;
+      left: 19px;
     }
     &--text {
       padding-bottom: 16px;
@@ -120,6 +113,9 @@
     }
     &__women {
       width: 500px;
+      &--container {
+        top: 77px;
+      }
     }
   }
   @media screen and (max-width: (991px)) {
@@ -129,6 +125,9 @@
     &__women {
       width: 400px;
       background-size: 404px 623px;
+      &--container {
+        top: 105px;
+      }
     }
     &__container {
       justify-content: center;
@@ -136,20 +135,31 @@
     }
   }
   @media screen and (max-width: (767px)) {
-    margin-top: 20px;
+    margin-top: 0;
     &__container {
       flex-direction: column;
+      p,span{
+        font-size: 27px;
+      }
     }
     &__men {
+      margin-top: 7px;
       background-size: 492px 685px;
       width: 400px;
+      height: auto;
     }
     &__women {
       background-size: 431px 671px;
       width: 400px;
+      height: auto;
+      &--container {
+        top: 7px;
+      }
     }
     .logo {
       width: 96%;
+      height: 224px;
+      margin-top: 9px;
     }
     &__celebrate {
       background-image: none;
@@ -162,23 +172,31 @@
     }
   }
   @media screen and (max-width: (567px)) {
+    &__container {
+      gap: 0;
+    }
     &__men {
       background-size: 452px 626px;
       width: 400px;
-      padding-left: 38px;
+
+      video {
+        height: 55%;
+      }
     }
     &__women {
       background-size: 402px 671px;
       width: 400px;
-      padding-left: 38px;
+      video {
+        height: 53%;
+      }
       &--container {
-        top: 203px;
-        left: 43px;
+        top: 0;
+        left: 7px;
       }
     }
     .logo {
       width: 100%;
-      height: 300px;
+      height: 225px;
     }
   }
 }

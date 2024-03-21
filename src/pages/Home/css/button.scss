@@ -1,0 +1,16 @@
+#page-numbers {
+  .nex[disabled]:hover {
+    cursor: not-allowed;
+    color: red;
+  }
+  .nex {
+    cursor: pointer;
+  }
+  .prev[disabled]:hover {
+    cursor: not-allowed;
+    color: red;
+  }
+  .prev {
+    cursor: pointer;
+  }
+}

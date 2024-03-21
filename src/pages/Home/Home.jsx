@@ -2,15 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./css/home.scss";
 import Logo from "../logo.jpeg";
-import celebrateImage from "../celebrate.png";
 import BackgroundVideo from "../../components/BackgroundVideo";
 
 export default function Home() {
   return (
     <div className="">
-      <div className="home__celebrate">
-        <img src={celebrateImage} alt="" />
-      </div>
       <div className="container">
         <div className="home">
           <img src={Logo} className="logo" alt="" />
