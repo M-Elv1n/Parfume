@@ -73,6 +73,7 @@
     grid-template-columns: repeat(5, 1fr);
     margin-bottom: 25px;
     grid-gap: 10px;
+    text-align: center;
     &--detail {
       display: flex;
       flex-direction: column;

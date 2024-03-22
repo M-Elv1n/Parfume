@@ -195,7 +195,7 @@ function ProductList() {
               p-id="2178"
             ></path>
           </svg>
-          <p className="">None product</p>
+          <p className="">No product</p>
         </div>
       );
     }
@@ -250,7 +250,6 @@ function ProductList() {
     </li>
   ));
 
-
   return (
     <div className="">
       <Link to="/" class="link">
@@ -290,7 +289,7 @@ function ProductList() {
         <ul className={productListClassName}>{renderProducts()}</ul>
         <ul id="page-numbers" className="container man__number">
           {/* Кнопка "Назад" */}
-          <button
+          <p
             className="prev"
             onClick={() => handlePageClick("prev")}
             disabled={currentPage === 1} // Отключить кнопку, если вы на первой странице
@@ -311,10 +310,10 @@ function ProductList() {
                 fill="#888888"
               ></path>
             </svg>
-          </button>
+          </p>
           {renderPageNumbers}
           {/* Кнопка "Следующая" */}
-          <button
+          <p
             className="nex"
             onClick={() => handlePageClick("next")}
             disabled={currentPage === totalPages} // Отключить кнопку, если вы на последней странице
@@ -335,7 +334,7 @@ function ProductList() {
                 fill="#888888"
               ></path>
             </svg>
-          </button>
+          </p>
         </ul>
       </div>
     </div>

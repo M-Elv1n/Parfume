@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./css/home.scss";
 import Logo from "../logo.jpeg";
 import BackgroundVideo from "../../components/BackgroundVideo";
+import Loader from "../../components/Loader";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Здесь можно добавить логику загрузки данных, например, запрос к серверу
+    // Здесь можно использовать setTimeout для имитации задержки загрузки данных
+    setTimeout(() => {
+      setLoading(false); // Устанавливаем loading в false, когда данные загружены
+    }, 1000); // Имитация задержки загрузки данных на 2 секунды
+  }, []);
+
+  if (loading) {
+    // Если данные еще загружаются, показываем загрузчик
+    return <Loader/>
+  }
+
   return (
     <div className="">
       <div className="container">
