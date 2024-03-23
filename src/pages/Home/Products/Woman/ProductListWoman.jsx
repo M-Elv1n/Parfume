@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import productsData from "../../../../data/productsWoman.json";
-import Loader from "../../../../components/Loader";
 import "./css/productlistwoman.scss";
 import "../../css/link.scss";
 import "../../css/empty.scss";
 import "../../css/button.scss";
+import "../../css/discount.scss";
 
 function ProductListWomen() {
-  const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -23,7 +22,7 @@ function ProductListWomen() {
     currentPage * productsPerPage
   );
 
-  const productListClassName = `man__product ${
+  const productListClassName = `woman__product ${
     currentProducts.length === 0 ? "empty-container" : ""
   }`;
 
@@ -40,19 +39,6 @@ function ProductListWomen() {
     urlParams.set("page", currentPage);
     navigate(`?${urlParams.toString()}`);
   }, [currentPage, navigate]);
-
-  useEffect(() => {
-    // Здесь можно добавить логику загрузки данных, например, запрос к серверу
-    // Здесь можно использовать setTimeout для имитации задержки загрузки данных
-    setTimeout(() => {
-      setLoading(false); // Устанавливаем loading в false, когда данные загружены
-    }, 1000); // Имитация задержки загрузки данных на 2 секунды
-  }, []);
-
-  if (loading) {
-    // Если данные еще загружаются, показываем загрузчик
-    return <Loader/>
-  }
 
   const handlePageClick = (direction) => {
     if (direction === "prev" && currentPage > 1) {
@@ -74,10 +60,6 @@ function ProductListWomen() {
       indexOfFirstProduct,
       indexOfLastProduct
     );
-
-    // if (currentProducts.length === 0) {
-    //   return <p>None product</p>;
-    // }
 
     const totalPages = Math.ceil(products.length / productsPerPage);
 
@@ -124,6 +106,12 @@ function ProductListWomen() {
         <div className="woman__container">
           <img src={product.image} alt={product.name} />
           <p className="">{product.name}</p>
+          <div className="discount_tag label_style_2">
+            <div className="discount_tag_graphics"></div>
+            <div className="discount_tag_name">
+              {Math.floor(100 - (product.price * 100) / product.oldprice)}%
+            </div>
+          </div>
           <div className="price">
             <p className="new-price">{product.price}azn</p>
             <p className="old-price">{product.oldprice}azn</p>
@@ -155,7 +143,7 @@ function ProductListWomen() {
   const renderPageNumbers = pageNumbers.map((number) => (
     <li key={number}>
       <p
-        className={`man__number--page ${
+        className={`woman__number--page ${
           number === currentPage ? "active" : ""
         }`}
         onClick={() => handlePageClick(number)} // Использование navigate для перехода на другую страницу
@@ -202,7 +190,7 @@ function ProductListWomen() {
       <div className="container woman">
         <p className="woman__title">Qadın ətirləri</p>
         <ul className={productListClassName}>{renderProducts()}</ul>
-        <ul id="page-numbers" className="container man__number">
+        <ul id="page-numbers" className="container woman__number">
           {/* Кнопка "Назад" */}
           <p
             className="prev"
@@ -257,3 +245,7 @@ function ProductListWomen() {
 }
 
 export default ProductListWomen;
+
+
+
+

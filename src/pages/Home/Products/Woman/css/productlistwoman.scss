@@ -1,18 +1,18 @@
 .woman {
   .old-price {
-    text-decoration: line-through #888;
-    color: #888;
+    text-decoration: line-through var(--text-product-oldprc-color);
+    color: var(--text-product-oldprc-color);
   }
   a {
     padding: 10px 50px;
     color: white;
-    background-color: #ae2238;
+    background-color: var(--primary-product-btn-color);
     font-weight: 600;
     border-radius: 8px;
     font-family: "Montserrat", sans-serif;
     &:hover {
       transition: 0.3s;
-      background-color: #8b0000;
+      background-color: var(--secondary-product-btn-color);
       color: white;
     }
   }
@@ -24,6 +24,7 @@
     font-size: 31px;
   }
   &__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,8 +39,6 @@
     .new-price {
       font-size: 25px;
       padding: 10px;
-      // background-color: red;
-      // color: white;
     }
     .old-price {
       font-size: 22px;
@@ -55,34 +54,24 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    button {
-      padding: 16px;
+    &--page {
+      padding: 10px;
       cursor: pointer;
+      font-size: 17px;
+      &:hover {
+        border: 1px solid black;
+      }
+      &.active {
+        border: 1px solid black;
+      }
     }
   }
   &__product {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     grid-gap: 10px;
-    &--detail {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      &__container {
-        height: 100vh;
-      }
-      h2 {
-        font-size: 36px;
-      }
-      p {
-        font-size: 20px;
-      }
-      img {
-        width: 300px;
-      }
-    }
+    text-align: center;
   }
 
   @media screen and (max-width: (1400px)) {
@@ -100,6 +89,12 @@
     }
   }
   @media screen and (max-width: (567px)) {
+    &__product {
+      p {
+        overflow-wrap: break-word;
+        font-size: 16px;
+      }
+    }
     &__container {
       gap: 0;
       h2 {
@@ -113,6 +108,8 @@
       }
       a {
         padding: 7px 33px;
+        font-weight: 300;
+        font-size: 18px;
       }
       img {
         width: 160px;

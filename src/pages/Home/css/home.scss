@@ -24,25 +24,19 @@
   }
   a {
     padding: 10px 50px;
-    // border: 1px solid black;
     color: black;
-    // font-size: 22px;
-    // font-weight: bolder;
-
-    background-color: #f7b538;
+    background-color: var(--primary-btn-color);
     font-weight: 600;
     border-radius: 8px;
     font-family: "Montserrat", sans-serif;
     &:hover {
       transition: 0.3s;
-      // background-color: black;
-      background-color: rgb(234, 220, 68);
+      background-color: var(--secondary-btn-color);
       color: white;
     }
   }
   &__container {
     display: flex;
-    // justify-content: space-between;
     gap: 10px;
     h2 {
       font-size: 60px;
@@ -50,17 +44,7 @@
     }
   }
   &__women {
-    // padding-left: 30px;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-start;
-    // gap: 30px;
-    // padding: 10px;
-    // background-image: url(../../../../public/img/home/woman.jpeg);
-    // background-repeat: no-repeat;
-    // background-position: right;
-    // background-size: 600px 685px;
-    color: red;
+    color: var(--text-home-color);
     width: 600px;
     height: 428px;
     position: relative;
@@ -78,17 +62,7 @@
     }
   }
   &__men {
-    // padding-left: 30px;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-start;
-    // gap: 30px;
-    // padding: 10px;
-    // background-image: url(../../../../public/img/home/man.jpeg);
-    // background-repeat: no-repeat;
-    // background-position: left;
-    // background-size: 600px 685px;
-    color: red;
+    color: var(--text-home-color);
     width: 600px;
     height: 428px;
     position: relative;
@@ -124,7 +98,6 @@
     }
     &__women {
       width: 400px;
-      background-size: 404px 623px;
       &--container {
         top: 105px;
       }
@@ -144,12 +117,10 @@
     }
     &__men {
       margin-top: 7px;
-      background-size: 492px 685px;
       width: 400px;
       height: auto;
     }
     &__women {
-      background-size: 431px 671px;
       width: 400px;
       height: auto;
       &--container {
@@ -172,11 +143,11 @@
     }
   }
   @media screen and (max-width: (567px)) {
+    overflow: hidden;
     &__container {
       gap: 0;
     }
     &__men {
-      background-size: 452px 626px;
       width: 400px;
 
       video {
@@ -184,19 +155,18 @@
       }
     }
     &__women {
-      background-size: 402px 671px;
       width: 400px;
       video {
         height: 53%;
       }
       &--container {
         top: 0;
-        left: 7px;
+        left: 22px;
       }
     }
     .logo {
       width: 100%;
-      height: 225px;
+      height: 197px;
     }
   }
 }

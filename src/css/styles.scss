@@ -13,6 +13,15 @@ body {
   width: 100%;
 }
 
+:root{
+  --text-home-color: #EE2748;
+  --primary-btn-color: #f7b538;
+  --secondary-btn-color: rgb(234, 220, 68);
+  --primary-product-btn-color: #ae2238;
+  --secondary-product-btn-color: #8b0000;
+  --text-product-oldprc-color: #888;
+}
+
 .container {
   max-width: 1350px;
   margin: auto;

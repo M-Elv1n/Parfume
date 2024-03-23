@@ -1,0 +1,23 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  &__container {
+    height: 100vh;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 25px;
+  }
+  img {
+    width: 300px;
+  }
+  @media screen and (max-width: (567px)) {
+    margin-top: 70px;
+  }
+}

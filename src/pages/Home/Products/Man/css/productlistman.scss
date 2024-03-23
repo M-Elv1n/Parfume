@@ -1,18 +1,18 @@
 .man {
   .old-price {
-    text-decoration: line-through #888;
-    color: #888;
+    text-decoration: line-through var(--text-product-oldprc-color);
+    color: var(--text-product-oldprc-color);
   }
   a {
     padding: 10px 50px;
     color: white;
-    background-color: #ae2238;
+    background-color: var(--primary-product-btn-color);
     font-weight: 600;
     border-radius: 8px;
     font-family: "Montserrat", sans-serif;
     &:hover {
       transition: 0.3s;
-      background-color: #8b0000;
+      background-color: var(--secondary-product-btn-color);
       color: white;
     }
   }
@@ -39,8 +39,6 @@
     .new-price {
       font-size: 25px;
       padding: 10px;
-      // background-color: red;
-      // color: white;
     }
     .old-price {
       font-size: 22px;
@@ -60,10 +58,10 @@
       padding: 10px;
       cursor: pointer;
       font-size: 17px;
-      &:hover{
+      &:hover {
         border: 1px solid black;
       }
-      &.active{
+      &.active {
         border: 1px solid black;
       }
     }
@@ -74,73 +72,6 @@
     margin-bottom: 25px;
     grid-gap: 10px;
     text-align: center;
-    &--detail {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      &__container {
-        height: 100vh;
-      }
-      h2 {
-        font-size: 36px;
-      }
-      p {
-        font-size: 20px;
-      }
-      img {
-        width: 300px;
-      }
-    }
-  }
-
-  //discound
-  .discount_tag.label_style_2 {
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: white;
-    padding: 0 0 10px;
-  }
-  .discount_tag.label_style_2 .discount_tag_graphics {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 10px;
-  }
-  .discount_tag.label_style_2 .discount_tag_graphics:before {
-    position: absolute;
-    right: 0;
-    top: 0;
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 10px solid #ae2238;
-    border-left: 20px solid transparent;
-  }
-  .discount_tag.label_style_2 .discount_tag_graphics:after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 10px solid #ae2238;
-    border-right: 20px solid transparent;
-  }
-  .discount_tag.label_style_2 .discount_tag_graphics {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 10px;
-  }
-  .discount_tag.label_style_2 .discount_tag_name {
-    width: 40px;
-    text-align: center;
-    background: #ae2238;
-    padding: 10px 0;
   }
 
   @media screen and (max-width: (1400px)) {
@@ -155,9 +86,17 @@
   @media screen and (max-width: (767px)) {
     &__product {
       grid-template-columns: repeat(2, 1fr);
+      p {
+      }
     }
   }
   @media screen and (max-width: (567px)) {
+    &__product {
+      p {
+        overflow-wrap: break-word;
+        font-size: 17px;
+      }
+    }
     &__container {
       gap: 0;
       h2 {
@@ -171,6 +110,8 @@
       }
       a {
         padding: 7px 33px;
+        font-weight: 300;
+        font-size: 18px;
       }
       img {
         width: 160px;
