@@ -6,6 +6,7 @@ import "../../css/link.scss";
 import "../../css/empty.scss";
 import "../../css/button.scss";
 import "../../css/discount.scss";
+// import Bag from "../../../../../public/img/svg/bag.svg";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -60,7 +61,7 @@ function ProductList() {
       indexOfFirstProduct,
       indexOfLastProduct
     );
-    
+
     const totalPages = Math.ceil(products.length / productsPerPage);
 
     if (currentPage > totalPages || currentPage <= 0) {
@@ -101,32 +102,107 @@ function ProductList() {
       );
     }
 
+    // return currentProducts.map((product) => (
+    //   <li key={product.id} className="container">
+    //     <div className="man__container">
+    //       <img src={product.image} alt={product.name} />
+    //       <p className="">{product.name}</p>
+    //       <div className="discount_tag label_style_2">
+    //         <div className="discount_tag_graphics"></div>
+    //         <div className="discount_tag_name">
+    //           {Math.floor(100 - (product.price * 100) / product.oldprice)}%
+    //         </div>
+    //       </div>
+    //       <Link
+    //         to={`https://wa.me/+994552166694?text=Salam,maraqlandığım məhsul - ${encodeURIComponent(
+    //           product.name
+    //         )}, qiymət: ${product.price}. Daha ətraflı: ${
+    //           window.location.origin
+    //         }/kisi-etirleri/${product.name.toLowerCase().replace(/\s+/g, "-")}`}
+    //         target="_blank"
+    //         rel="noopener noreferrer"
+    //       >
+    //         <img
+    //           id="btn--bag"
+    //           src="../img/svg/bag.svg"
+    //           alt=""
+    //           width={24}
+    //           height={24}
+    //         />
+    //         Sifarişə başla
+    //       </Link>
+    //       <div className="price">
+    //         <p className="new-price">{product.price}azn</p>
+    //         <p className="old-price">{product.oldprice}azn</p>
+    //       </div>
+    //       <h1 className="sold-out">Sold Out</h1>
+    //     </div>
+    //   </li>
+    // ));
+
     return currentProducts.map((product) => (
       <li key={product.id} className="container">
-        <div className="man__container">
+        <div
+          className={`man__container ${
+            product.price === undefined || product.price === null
+              ? "disabled"
+              : ""
+          }`}
+        >
           <img src={product.image} alt={product.name} />
           <p className="">{product.name}</p>
-          <div className="discount_tag label_style_2">
-            <div className="discount_tag_graphics"></div>
-            <div className="discount_tag_name">
-              {Math.floor(100 - (product.price * 100) / product.oldprice)}%
-            </div>
-          </div>
-          <div className="price">
-            <p className="new-price">{product.price}azn</p>
-            <p className="old-price">{product.oldprice}azn</p>
-          </div>
-          <Link
-            to={`https://wa.me/+994552166694?text=Salam,maraqlandığım məhsul - ${encodeURIComponent(
-              product.name
-            )}, qiymət: ${product.price}. Daha ətraflı: ${
-              window.location.origin
-            }/kisi-etirleri/${product.name.toLowerCase().replace(/\s+/g, "-")}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Sifariş et
-          </Link>
+          {product.price !== undefined && product.price !== null ? (
+            <>
+              <div className="discount_tag label_style_2">
+                <div className="discount_tag_graphics"></div>
+                <div className="discount_tag_name">
+                  {Math.floor(100 - (product.price * 100) / product.oldprice)}%
+                </div>
+              </div>
+              <Link
+                to={`https://wa.me/+994552166694?text=Salam,maraqlandığım məhsul - ${encodeURIComponent(
+                  product.name
+                )}, qiymət: ${product.price}. Daha ətraflı: ${
+                  window.location.origin
+                }/kisi-etirleri/${product.name
+                  .toLowerCase()
+                  .replace(/\s+/g, "-")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  id="btn--bag"
+                  src="../img/svg/bag.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
+                Sifarişə başla
+              </Link>
+              <div className="price">
+                <p className="new-price">{product.price}azn</p>
+                <p className="old-price">{product.oldprice}azn</p>
+              </div>
+            </>
+          ) : (
+            <>
+              <Link
+                to=""
+                onClick={(e) => e.preventDefault()}
+                className="disabled-link"
+              >
+                <img
+                  id="btn--bag"
+                  src="../img/svg/bag.svg"
+                  alt=""
+                  width={24}
+                  height={24}
+                />
+                Sifarişə başla
+              </Link>
+              <h1 className="sold-out">Sold Out</h1>
+            </>
+          )}
         </div>
       </li>
     ));

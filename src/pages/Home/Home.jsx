@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./css/home.scss";
 import Logo from "../logo.jpeg";
 import BackgroundVideo from "../../components/BackgroundVideo";
+// import BtnEmail from "../../components/BtnEmail";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
                   <span>ətirləri</span>
                 </div>
                 <div>
-                  <Link to={"/kisi-etirleri"}>Sifariş et</Link>
+                  <Link to={"/kisi-etirleri"}>Sifarişə başla</Link>
                 </div>
               </div>
             </div>
@@ -31,7 +32,7 @@ export default function Home() {
                   <span>ətirləri</span>
                 </div>
                 <div>
-                  <Link to={"/qadin-etirleri"}>Sifariş et</Link>
+                  <Link to={"/qadin-etirleri"}>Sifarişə başla</Link>
                 </div>
               </div>
             </div>

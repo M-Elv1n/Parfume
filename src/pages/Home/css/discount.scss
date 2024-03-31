@@ -20,7 +20,7 @@
     content: "";
     width: 0;
     height: 0;
-    border-top: 10px solid var(--primary-product-btn-color);
+    border-top: 10px solid var(--primary-product-discount-color);
     border-left: 20px solid transparent;
   }
   .discount_tag.label_style_2 .discount_tag_graphics:after {
@@ -30,7 +30,7 @@
     content: "";
     width: 0;
     height: 0;
-    border-top: 10px solid var(--primary-product-btn-color);
+    border-top: 10px solid var(--primary-product-discount-color);
     border-right: 20px solid transparent;
   }
   .discount_tag.label_style_2 .discount_tag_graphics {
@@ -43,6 +43,6 @@
   .discount_tag.label_style_2 .discount_tag_name {
     width: 40px;
     text-align: center;
-    background: var(--primary-product-btn-color);
+    background: var(--primary-product-discount-color);
     padding: 10px 0;
   }

@@ -15,127 +15,43 @@
     },
     {
         "id": 3,
-        "name": "Versace Eros",
+        "name": "Dior Fahrenheit",
         "image": "./img/man/3.jpeg",
-        "price": 89,
-        "oldprice": 230
+        "price": 99,
+        "oldprice": 295
     },
     {
         "id": 4,
-        "name": "Armani Code",
+        "name": "Giorgio  Armani ACQUA DI GIO",
         "image": "./img/man/4.jpeg",
-        "price": 79,
-        "oldprice": 195
+        "price": 99,
+        "oldprice": 295
     },
     {
         "id": 5,
-        "name": "Product 1",
-        "image": "./img/man/1.jpeg",
-        "price": 10.99,
-        "oldprice": 1
+        "name": "Giorgio  Armani ACQUA DI GIO Detoilette",
+        "image": "./img/man/5.jpeg",
+        "price": 99,
+        "oldprice": 295
     },
     {
         "id": 6,
-        "name": "Product 2",
-        "image": "./img/man/1.jpeg",
-        "price": 19.99,
-        "oldprice": 1
+        "name": "YSL La Nuit DE L'HOMME",
+        "image": "./img/man/6.jpeg"
     },
     {
         "id": 7,
-        "name": "Product 1",
-        "image": "./img/man/1.jpeg",
-        "price": 10.99,
-        "oldprice": 1
+        "name": "Hugo BOSS",
+        "image": "./img/man/7.jpeg"
     },
     {
         "id": 8,
-        "name": "Product 2",
-        "image": "./img/man/1.jpeg",
-        "price": 19.99,
-        "oldprice": 1
+        "name": "Hugo BOSS",
+        "image": "./img/man/8.jpeg"
     },
     {
         "id": 9,
-        "name": "Product 1",
-        "image": "./img/man/1.jpeg",
-        "price": 10.99,
-        "oldprice": 1
-    },
-    {
-        "id": 10,
-        "name": "Product 2",
-        "image": "./img/man/1.jpeg",
-        "price": 19.99,
-        "oldprice": 1
-    },
-    {
-        "id": 11,
-        "name": "Number2",
-        "image": "./img/man/1.jpeg",
-        "price": 10.99,
-        "oldprice": 1
-    },
-    {
-        "id": 12,
-        "name": "Product 2",
-        "image": "./img/man/1.jpeg",
-        "price": 19.99,
-        "oldprice": 1
-    },
-    {
-        "id": 13,
-        "name": "Product 1",
-        "image": "./img/man/1.jpeg",
-        "price": 10.99,
-        "oldprice": 1
-    },
-    {
-        "id": 14,
-        "name": "Product 2",
-        "image": "./img/man/1.jpeg",
-        "price": 19.99,
-        "oldprice": 1
-    },
-    {
-        "id": 15,
-        "name": "Product 1",
-        "image": "./img/man/1.jpeg",
-        "price": 10.99,
-        "oldprice": 1
-    },
-    {
-        "id": 16,
-        "name": "Product 2",
-        "image": "./img/man/1.jpeg",
-        "price": 19.99,
-        "oldprice": 1
-    },
-    {
-        "id": 17,
-        "name": "Product 2",
-        "image": "./img/man/1.jpeg",
-        "price": 19.99,
-        "oldprice": 1
-    },
-    {
-        "id": 18,
-        "name": "qadin",
-        "image": "./img/man/1.jpeg",
-        "price": 19.99
-    },
-    {
-        "id": 19,
-        "name": "qadin",
-        "image": "./img/man/1.jpeg",
-        "price": 19.99,
-        "oldprice": 1
-    },
-    {
-        "id": 20,
-        "name": "qadin",
-        "image": "./img/man/1.jpeg",
-        "price": 19.99,
-        "oldprice": 1
+        "name": "Dior SAUVAGE",
+        "image": "./img/man/9.jpeg"
     }
 ]
