@@ -5,6 +5,7 @@
   color: #000;
   text-decoration: none;
   display: flex;
+  max-width: 137px;
 }
 
 /* Hide extra text */
@@ -82,10 +83,4 @@
 
 .link:hover .icon:nth-child(2) {
   transform: translate(0px);
-}
-
-.sold-out {
-  padding-top: 8px;
-  font-size: 25px;
-  color: red;
 }

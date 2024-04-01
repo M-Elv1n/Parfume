@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import productsData from "../../../../data/productsWoman.json";
 import "./css/productlistwoman.scss";
-import "../../css/link.scss";
-import "../../css/empty.scss";
 import "../../css/button.scss";
 import "../../css/discount.scss";
+import Empty from "../../../../components/Empty";
+import BackBtn from "../../../../components/BackBtn";
+
 
 function ProductListWomen() {
   const [products, setProducts] = useState([]);
@@ -65,39 +66,9 @@ function ProductListWomen() {
 
     if (currentPage > totalPages || currentPage <= 0) {
       return (
-        <div className="empty">
-          <svg
-            t="1633674890073"
-            viewBox="0 0 1027 1024"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            p-id="2174"
-            width="68"
-            height="68"
-          >
-            <path
-              d="M188.2112 437.2992L2.4704 715.8784 0 719.3216l52.7104 293.5552A13.4784 13.4784 0 0 0 65.9968 1024H972.032l2.0992-11.1232 53.4272-298.3168-4.5824-6.272-203.9936-265.7024-3.9552-5.2864h-626.816z m-0.1536 48.896l25.9328 144.64-34.112 78.976H38.9376z m48.4352 160.6656h544.6144l28.6464 63.0016H209.2928z m602.88 63.0016l-36.1216-79.4368 14.9376-144.4992 171.9296 223.936z m-46.08-245.568L777.2416 619.008H239.9488l-28.3264-154.7136z m156.2496 532.7104H77.2864L30.7072 736.8704h965.4272z"
-              fill="#1D1F21"
-              p-id="2175"
-            ></path>
-            <path
-              d="M513.7792 235.8784a15.2192 15.2192 0 0 1-15.2192-15.2192V15.232a15.2192 15.2192 0 0 1 30.4384 0v205.44a15.2192 15.2192 0 0 1-15.2192 15.2064z"
-              fill="#1D1F21"
-              p-id="2176"
-            ></path>
-            <path
-              d="M714.3808 260.8a15.2192 15.2192 0 0 1-12.1344-24.384l123.7888-163.968a15.232 15.232 0 1 1 24.32 18.3424l-123.7888 163.9552a15.1808 15.1808 0 0 1-12.1856 6.0544z"
-              fill="#1D1F21"
-              p-id="2177"
-            ></path>
-            <path
-              d="M313.1648 260.8a15.1552 15.1552 0 0 1-12.1472-6.0544L177.2288 90.7904a15.232 15.232 0 1 1 24.32-18.3424l123.776 163.968a15.2064 15.2064 0 0 1-12.1344 24.384z"
-              fill="#1D1F21"
-              p-id="2178"
-            ></path>
-          </svg>
-          <p className="">No product</p>
-        </div>
+        <>
+          <Empty />
+        </>
       );
     }
 
@@ -233,38 +204,7 @@ function ProductListWomen() {
 
   return (
     <div className="">
-      <Link to="/" class="link">
-        <div class="link-icon">
-          <svg
-            class="icon"
-            width="24"
-            height="24"
-            xmlns="http://www.w3.org/2000/svg"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-          >
-            {/* <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" /> */}
-            <path d="M2.117 12l7.527 -6.235 -.644 -.765 -9 7.521 9 7.479 .645 -.764 -7.529 -6.236h21.884v1h-21.883z" />
-          </svg>
-          <svg
-            class="icon"
-            width="24"
-            height="24"
-            xmlns="http://www.w3.org/2000/svg"
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-          >
-            {/* <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" /> */}
-            <path d="M2.117 12l7.527 -6.235 -.644 -.765 -9 7.521 9 7.479 .645 -.764 -7.529 -6.236h21.884v1h-21.883z" />
-          </svg>
-        </div>
-        <span class="mask">
-          <div class="link-container">
-            <span class="link-title1 title">Əsas səhifə</span>
-            <span class="link-title2 title">Əsas səhifə</span>
-          </div>
-        </span>
-      </Link>
+      <BackBtn/>
       <div className="container woman">
         <p className="woman__title">Qadın ətirləri</p>
         <ul className={productListClassName}>{renderProducts()}</ul>
