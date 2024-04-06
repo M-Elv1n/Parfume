@@ -84,3 +84,8 @@
 .link:hover .icon:nth-child(2) {
   transform: translate(0px);
 }
+@media screen and (max-width: (567px)) {
+  .link{
+    max-width: 100%;
+  }
+}
