@@ -24,11 +24,12 @@
   }
   a {
     padding: 10px 50px;
-    color: black;
+    color: #ffffff;
     background-color: var(--primary-btn-color);
     font-weight: 600;
     border-radius: 8px;
     font-family: "Montserrat", sans-serif;
+    border: 1px solid #ffffff;
     &:hover {
       transition: 0.3s;
       background-color: var(--secondary-btn-color);
@@ -38,6 +39,8 @@
   &__container {
     display: flex;
     gap: 10px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     h2 {
       font-size: 60px;
       letter-spacing: 3px;
@@ -51,8 +54,8 @@
     &--container {
       position: absolute;
       z-index: 100;
-      top: 45px;
-      left: 19px;
+      top: 126px;
+      left: 193px;
     }
     &--text {
       padding-bottom: 16px;
@@ -69,8 +72,8 @@
     &--container {
       position: absolute;
       z-index: 100;
-      top: 45px;
-      left: 19px;
+      top: 126px;
+      left: 193px;
     }
     &--text {
       padding-bottom: 16px;
@@ -88,7 +91,8 @@
     &__women {
       width: 500px;
       &--container {
-        top: 77px;
+        top: 172px;
+        left: 153px;
       }
     }
   }
@@ -99,7 +103,8 @@
     &__women {
       width: 400px;
       &--container {
-        top: 105px;
+        top: 147px;
+        left: 94px;
       }
     }
     &__container {
@@ -111,7 +116,8 @@
     margin-top: 0;
     &__container {
       flex-direction: column;
-      p,span{
+      p,
+      span {
         font-size: 27px;
       }
     }

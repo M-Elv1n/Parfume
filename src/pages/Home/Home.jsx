@@ -16,8 +16,7 @@ export default function Home() {
               <BackgroundVideo videoSource="./video/men.mp4" />
               <div className="home__women--container">
                 <div className="home__men--text">
-                  <p>Kişi</p>
-                  <span>ətirləri</span>
+                  <h1>Men</h1>
                 </div>
                 <div>
                   <Link to={"/kisi-etirleri"}>Sifarişə başla</Link>
@@ -28,8 +27,7 @@ export default function Home() {
               <BackgroundVideo videoSource="./video/women.mp4" />
               <div className="home__women--container">
                 <div className="home__women--text">
-                  <p>Qadın</p>
-                  <span>ətirləri</span>
+                  <h1>Women</h1>
                 </div>
                 <div>
                   <Link to={"/qadin-etirleri"}>Sifarişə başla</Link>

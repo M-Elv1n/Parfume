@@ -129,6 +129,10 @@ function ProductList() {
                   {Math.floor(100 - (product.price * 100) / product.oldprice)}%
                 </div>
               </div>
+              <div className="price">
+                <p className="new-price">{product.price}azn</p>
+                <p className="old-price">{product.oldprice}azn</p>
+              </div>
               <Link
                 to={`https://wa.me/+994552166694?text=Salam,maraqlandığım məhsul - ${encodeURIComponent(
                   product.name
@@ -147,12 +151,8 @@ function ProductList() {
                   width={24}
                   height={24}
                 />
-                Sifarişə başla
+                Sifariş et
               </Link>
-              <div className="price">
-                <p className="new-price">{product.price}azn</p>
-                <p className="old-price">{product.oldprice}azn</p>
-              </div>
             </>
           ) : (
             <>
@@ -168,7 +168,7 @@ function ProductList() {
                   width={24}
                   height={24}
                 />
-                Sifarişə başla
+                Sifariş et
               </Link>
               <h1 className="sold-out">Sold Out</h1>
             </>
@@ -199,7 +199,7 @@ function ProductList() {
 
   return (
     <div className="">
-      <BackBtn/>
+      <BackBtn />
       <div className="container man">
         <p className="man__title">Kişi ətirləri</p>
         <ul className={productListClassName}>{renderProducts()}</ul>

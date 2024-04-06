@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 
 const BackgroundVideo = ({ videoSource }) => {
   const videoRef = useRef(null);
@@ -11,10 +11,10 @@ const BackgroundVideo = ({ videoSource }) => {
       video.play(); // автоматически начинаем воспроизведение после окончания
     };
 
-    video.addEventListener('ended', onEnded);
+    video.addEventListener("ended", onEnded);
 
     return () => {
-      video.removeEventListener('ended', onEnded);
+      video.removeEventListener("ended", onEnded);
     };
   }, []);
 

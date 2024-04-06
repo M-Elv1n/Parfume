@@ -7,7 +7,6 @@ import "../../css/discount.scss";
 import Empty from "../../../../components/Empty";
 import BackBtn from "../../../../components/BackBtn";
 
-
 function ProductListWomen() {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(() => {
@@ -134,6 +133,10 @@ function ProductListWomen() {
                   {Math.floor(100 - (product.price * 100) / product.oldprice)}%
                 </div>
               </div>
+              <div className="price">
+                <p className="new-price">{product.price}azn</p>
+                <p className="old-price">{product.oldprice}azn</p>
+              </div>
               <Link
                 to={`https://wa.me/+994552166694?text=Salam,maraqlandığım məhsul - ${encodeURIComponent(
                   product.name
@@ -152,12 +155,8 @@ function ProductListWomen() {
                   width={24}
                   height={24}
                 />
-                Sifarişə başla
+                Sifariş et
               </Link>
-              <div className="price">
-                <p className="new-price">{product.price}azn</p>
-                <p className="old-price">{product.oldprice}azn</p>
-              </div>
             </>
           ) : (
             <>
@@ -173,7 +172,7 @@ function ProductListWomen() {
                   width={24}
                   height={24}
                 />
-                Sifarişə başla
+                Sifariş et
               </Link>
               <h1 className="sold-out">Sold Out</h1>
             </>
@@ -204,7 +203,7 @@ function ProductListWomen() {
 
   return (
     <div className="">
-      <BackBtn/>
+      <BackBtn />
       <div className="container woman">
         <p className="woman__title">Qadın ətirləri</p>
         <ul className={productListClassName}>{renderProducts()}</ul>
