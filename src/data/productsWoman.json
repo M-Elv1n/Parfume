@@ -1,5 +1,47 @@
 [
     {
+        "id": 48,
+        "name": "Narciso Poudree",
+        "image": "./img/women/48.jpeg",
+        "price": 89,
+        "oldprice": 219
+    },
+    {
+        "id": 47,
+        "name": "givenchy l'interdit",
+        "image": "./img/women/47.jpeg",
+        "price": 109,
+        "oldprice": 255
+    },
+    {
+        "id": 46,
+        "name": "Versace NOIR",
+        "image": "./img/women/46.jpeg",
+        "price": 99,
+        "oldprice": 209
+    },
+    {
+        "id": 45,
+        "name": "Narciso Rodriguez Rouge",
+        "image": "./img/women/45.jpeg",
+        "price": 89,
+        "oldprice": 169
+    },
+    {
+        "id": 41,
+        "name": "Roja Oceania",
+        "image": "./img/women/41.jpeg",
+        "price": 219,
+        "oldprice": 605
+    },
+    {
+        "id": 37,
+        "name": "Nishane ANI",
+        "image": "./img/women/37.jpeg",
+        "price": 209,
+        "oldprice": 550
+    },
+    {
         "id": 1,
         "name": "Roja ISOLA BLU",
         "image": "./img/women/1.jpeg",
@@ -252,11 +294,6 @@
         "oldprice": 299
     },
     {
-        "id": 37,
-        "name": "YSL Libre Sold OUT",
-        "image": "./img/women/37.jpeg"
-    },
-    {
         "id": 38,
         "name": "Givenchy L'INTERDIT",
         "image": "./img/women/38.jpeg"
@@ -270,11 +307,6 @@
         "id": 40,
         "name": "Mancera AOUD EXCLUSIF",
         "image": "./img/women/40.jpeg"
-    },
-    {
-        "id": 41,
-        "name": "Carolina Herrera GOOD GIRL",
-        "image": "./img/women/41.jpeg"
     },
     {
         "id": 42,
