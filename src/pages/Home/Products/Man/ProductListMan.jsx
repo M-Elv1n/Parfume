@@ -111,7 +111,7 @@ function ProductList() {
     // ));
 
     return currentProducts.map((product) => (
-      <li key={product.id} className="container">
+      <li key={product.id} className="product">
         <div
           className={`man__container ${
             product.price === undefined || product.price === null
