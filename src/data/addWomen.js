@@ -35,8 +35,8 @@ fs.readFile(filePath, "utf8", (err, data) => {
     return newProduct;
   }
 
-  // Пример добавления нового продукта
-  addNewProduct("Givenchy IRRESISTIBLE", "./img/women/5.jpeg", 119, 249);
+  // добавления нового продукта
+  addNewProduct("Carolina Herrera GOOD GIRL", "./img/women/13.jpeg", 109, 229);
 
   // Преобразование объекта JavaScript обратно в JSON
   let newJSON = JSON.stringify(products, null, 4);
@@ -50,4 +50,3 @@ fs.readFile(filePath, "utf8", (err, data) => {
     console.log("Новые продукты успешно добавлены в существующий файл.");
   });
 });
-
