@@ -2,36 +2,32 @@
     {
         "id": 1,
         "name": "Tom Ford Tobacco Vanille",
-        "image": "./img/man/1.jpeg",
-        "price": 129,
-        "oldprice": 675
+        "image": "./img/man/1.jpeg"
     },
     {
         "id": 2,
         "name": "Killian Angel's Share",
         "image": "./img/man/2.jpeg",
-        "price": 129,
-        "oldprice": 710
+        "price": 189,
+        "oldprice": 529
     },
     {
         "id": 3,
         "name": "Dior Fahrenheit",
         "image": "./img/man/3.jpeg",
-        "price": 99,
-        "oldprice": 295
+        "price": 129,
+        "oldprice": 299
     },
     {
         "id": 4,
-        "name": "Giorgio  Armani ACQUA DI GIO",
-        "image": "./img/man/4.jpeg",
-        "price": 99,
-        "oldprice": 295
+        "name": "Giorgio Armani ACQUA DI GIO",
+        "image": "./img/man/4.jpeg"
     },
     {
         "id": 5,
-        "name": "Giorgio  Armani ACQUA DI GIO Detoilette",
+        "name": "Giorgio Armani ACQUA DI GIO Detoilette",
         "image": "./img/man/5.jpeg",
-        "price": 99,
+        "price": 119,
         "oldprice": 295
     },
     {

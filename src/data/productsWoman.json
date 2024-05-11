@@ -1,210 +1,201 @@
 [
     {
         "id": 1,
+        "name": "Killian Angel's Share",
+        "image": "./img/women/Killian.jpeg",
+        "price": 189,
+        "oldprice": 529
+    },
+    {
+        "id": 2,
         "name": "Carolina Herrera GOOD GIRL",
         "image": "./img/women/13.jpeg",
         "price": 109,
         "oldprice": 229
     },
     {
-        "id": 2,
+        "id": 3,
         "name": "Givenchy IRRESISTIBLE",
         "image": "./img/women/5.jpeg",
         "price": 119,
         "oldprice": 249
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "Givenchy L'INTERDIT",
         "image": "./img/women/9.jpeg",
         "price": 119,
         "oldprice": 249
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "Xerjoff ACCENTO",
         "image": "./img/women/11.jpeg",
         "price": 159,
         "oldprice": 379
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "Dolce & Gabbana Queen",
         "image": "./img/women/14.jpeg",
         "price": 109,
         "oldprice": 239
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "Chanel ALLURE SENSUELLE",
         "image": "./img/women/2.jpeg",
         "price": 119,
         "oldprice": 219
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "Narciso Poudree",
         "image": "./img/women/48.jpeg",
         "price": 89,
         "oldprice": 219
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "givenchy l'interdit",
         "image": "./img/women/47.jpeg",
         "price": 109,
         "oldprice": 255
     },
     {
-        "id": 9,
+        "id": 10,
         "name": "Versace NOIR",
         "image": "./img/women/46.jpeg",
         "price": 99,
         "oldprice": 209
     },
     {
-        "id": 10,
+        "id": 11,
         "name": "Narciso Rodriguez Rouge",
         "image": "./img/women/45.jpeg",
         "price": 89,
         "oldprice": 169
     },
     {
-        "id": 11,
+        "id": 12,
         "name": "Roja Oceania",
         "image": "./img/women/41.jpeg",
         "price": 219,
         "oldprice": 605
     },
     {
-        "id": 12,
+        "id": 13,
         "name": "Nishane ANI",
         "image": "./img/women/37.jpeg",
         "price": 209,
         "oldprice": 550
     },
     {
-        "id": 13,
-        "name": "Roja ISOLA BLU",
-        "image": "./img/women/1.jpeg",
-        "price": 139,
-        "oldprice": 580
-    },
-    {
         "id": 14,
-        "name": "INITIO Psychedelic Love",
-        "image": "./img/women/3.jpeg",
-        "price": 139,
-        "oldprice": 520
+        "name": "Roja ISOLA BLU",
+        "image": "./img/women/1.jpeg"
     },
     {
         "id": 15,
-        "name": "Christian Dior SAKURA",
-        "image": "./img/women/4.jpeg",
-        "price": 149,
-        "oldprice": 299
+        "name": "INITIO Psychedelic Love",
+        "image": "./img/women/3.jpeg"
     },
     {
         "id": 16,
-        "name": "Parfums de Marly DELINA EXCLUSIF ",
-        "image": "./img/women/6.jpeg",
-        "price": 169,
-        "oldprice": 530
+        "name": "Christian Dior SAKURA",
+        "image": "./img/women/4.jpeg"
     },
     {
         "id": 17,
-        "name": "Gritti ADELE",
-        "image": "./img/women/8.jpeg",
-        "price": 129,
-        "oldprice": 375
+        "name": "Parfums de Marly DELINA EXCLUSIF ",
+        "image": "./img/women/6.jpeg"
     },
     {
         "id": 18,
+        "name": "Gritti ADELE",
+        "image": "./img/women/8.jpeg"
+    },
+    {
+        "id": 19,
         "name": "Tiziana Terrenzi GOLD ROSE OUDH",
         "image": "./img/women/10.jpeg",
         "price": 179,
         "oldprice": 370
     },
     {
-        "id": 19,
+        "id": 20,
         "name": "Dior JOY",
-        "image": "./img/women/12.jpeg",
-        "price": 85,
-        "oldprice": 275
+        "image": "./img/women/12.jpeg"
     },
     {
-        "id": 20,
+        "id": 21,
         "name": "Trussardi DELICATE ROSE",
         "image": "./img/women/19.jpeg",
         "price": 55,
         "oldprice": 120
     },
     {
-        "id": 21,
+        "id": 22,
         "name": "Miss Dior BLOOMING BOUQUET",
         "image": "./img/women/22.jpeg",
         "price": 119,
         "oldprice": 240
     },
     {
-        "id": 22,
+        "id": 23,
         "name": "Chanel COCO MADEMOISELLE",
         "image": "./img/women/23.jpeg",
         "price": 119,
         "oldprice": 320
     },
     {
-        "id": 23,
+        "id": 24,
         "name": "Tiziana Terenzi URSA",
         "image": "./img/women/24.jpeg",
         "price": 189,
         "oldprice": 410
     },
     {
-        "id": 24,
+        "id": 25,
         "name": "Armani Prive MILANO",
-        "image": "./img/women/29.jpeg",
-        "price": 105,
-        "oldprice": 310
+        "image": "./img/women/29.jpeg"
     },
     {
-        "id": 25,
+        "id": 26,
         "name": "Tiziana Terenzi HALLEY",
         "image": "./img/women/31.jpeg",
         "price": 149,
         "oldprice": 375
     },
     {
-        "id": 26,
+        "id": 27,
         "name": "Versace YELLOW DIAMOND",
-        "image": "./img/women/32.jpeg",
-        "price": 99,
-        "oldprice": 289
+        "image": "./img/women/32.jpeg"
     },
     {
-        "id": 27,
+        "id": 28,
         "name": "Wulong Cha NISHANE",
         "image": "./img/women/33.jpeg",
         "price": 149,
         "oldprice": 485
     },
     {
-        "id": 28,
+        "id": 29,
         "name": "Creed SPRING FLOWER",
         "image": "./img/women/39.jpeg"
     },
     {
-        "id": 29,
+        "id": 30,
         "name": "Mancera AOUD EXCLUSIF",
         "image": "./img/women/40.jpeg"
     },
     {
-        "id": 30,
+        "id": 31,
         "name": "Korloff MAJESTIC TUBEROSE",
         "image": "./img/women/42.jpeg"
     },
     {
-        "id": 31,
+        "id": 32,
         "name": "Versace WOMEN",
         "image": "./img/women/44.jpeg"
     }
