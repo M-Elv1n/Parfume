@@ -65,9 +65,7 @@
     {
         "id": 10,
         "name": "Versace NOIR",
-        "image": "./img/women/46.jpeg",
-        "price": 99,
-        "oldprice": 209
+        "image": "./img/women/46.jpeg"
     },
     {
         "id": 11,
