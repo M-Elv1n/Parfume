@@ -36,7 +36,10 @@ fs.readFile(filePath, "utf8", (err, data) => {
   }
 
   // добавления нового продукта
-  addNewProduct("Killian Angel's Share", "./img/women/Killian.jpeg", 189, 529);
+  addNewProduct("ByRedo BAL D'Afrique", "./img/women/ByRedoBAL.jpeg", 139, 335);
+  addNewProduct("Parfums De Marly Valaya", "./img/women/Parfums.jpeg", 179, 409);
+  addNewProduct("Lancôme Idole", "./img/women/Lancome.jpeg", 119, 270);
+  addNewProduct("ByRedo Rose of no Man's Land", "./img/women/ByRedoRose.jpeg", 139, 335);
 
   // Преобразование объекта JavaScript обратно в JSON
   let newJSON = JSON.stringify(products, null, 4);
