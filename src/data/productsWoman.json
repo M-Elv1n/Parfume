@@ -16,14 +16,14 @@
     {
         "id": 31,
         "name": "ByRedo Bal D'Afrique",
-        "image": "./img/women/byredobal.jpeg",
+        "image": "./img/women/byredo.jpeg",
         "price": 189,
         "oldprice": 430
     },
     {
         "id": 30,
         "name": "ByRedo Animalique",
-        "image": "./img/women/byredo.jpeg",
+        "image": "./img/women/byredo2.jpeg",
         "price": 189,
         "oldprice": 430
     },
