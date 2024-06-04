@@ -1,0 +1,52 @@
+.discount_tag.label_style_2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+  padding: 0 0 10px;
+}
+
+.discount_tag.label_style_2 .discount_tag_graphics {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 10px;
+}
+
+.discount_tag.label_style_2 .discount_tag_graphics:before {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid var(--primary-product-discount-color);
+  border-left: 20px solid transparent;
+}
+
+.discount_tag.label_style_2 .discount_tag_graphics:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 10px solid var(--primary-product-discount-color);
+  border-right: 20px solid transparent;
+}
+
+.discount_tag.label_style_2 .discount_tag_graphics {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 10px;
+}
+
+.discount_tag.label_style_2 .discount_tag_name {
+  width: 40px;
+  text-align: center;
+  background: var(--primary-product-discount-color);
+  padding: 10px 0;
+}/*# sourceMappingURL=discount.css.map */

@@ -1,0 +1,25 @@
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+.detail__container {
+  height: 100vh;
+}
+.detail h2 {
+  font-size: 36px;
+}
+.detail p {
+  font-size: 25px;
+}
+.detail img {
+  width: 300px;
+}
+@media screen and (max-width: 567px) {
+  .detail {
+    margin-top: 70px;
+  }
+}/*# sourceMappingURL=detail.css.map */

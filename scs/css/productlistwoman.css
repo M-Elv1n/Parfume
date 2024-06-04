@@ -1,29 +1,47 @@
-.woman .old-price {
-  text-decoration: line-through red;
+.woman .sold-out {
+  padding-top: 8px;
+  font-size: 25px;
+  color: red;
+}
+.woman #btn--bag {
+  width: 24px;
+  height: 24px;
+}
+.woman .product {
+  height: 100%;
 }
 .woman a {
-  padding: 10px 50px;
-  border: 1px solid black;
-  color: black;
+  display: flex;
+  padding: 10px 33px;
+  color: #000000;
+  background-color: var(--primary-product-btn-color);
+  font-weight: 600;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #000000;
+  margin-top: auto;
 }
 .woman a:hover {
   transition: 0.3s;
-  background-color: black;
-  color: white;
+  background-color: var(--secondary-product-btn-color);
 }
-.woman h1 {
+.woman__title {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 26px;
+  margin-bottom: 85px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 31px;
 }
 .woman__container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   font-size: 20px;
   line-height: 1.2em;
   font-weight: 400;
+  height: 100%;
 }
 .woman__container img {
   width: 200px;
@@ -34,7 +52,9 @@
   padding: 10px;
 }
 .woman__container .old-price {
-  font-size: 22px;
+  font-size: 21px;
+  text-decoration: line-through red;
+  color: var(--text-product-oldprc-color);
 }
 .woman__container .price {
   display: flex;
@@ -46,34 +66,26 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 16px;
 }
-.woman__number button {
-  padding: 16px;
+.woman__number--page {
+  padding: 10px;
   cursor: pointer;
+  font-size: 17px;
+}
+.woman__number--page:hover {
+  border: 1px solid black;
+}
+.woman__number--page.active {
+  border: 1px solid black;
 }
 .woman__product {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   grid-gap: 10px;
-}
-.woman__product--detail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.woman__product--detail__container {
-  height: 100vh;
-}
-.woman__product--detail h2 {
-  font-size: 36px;
-}
-.woman__product--detail p {
-  font-size: 20px;
-}
-.woman__product--detail img {
-  width: 300px;
+  text-align: center;
+  grid-row-gap: 20px;
 }
 @media screen and (max-width: 1200px) {
   .woman__product {
@@ -86,6 +98,10 @@
   }
 }
 @media screen and (max-width: 567px) {
+  .woman__product p {
+    overflow-wrap: break-word;
+    font-size: 16px;
+  }
   .woman__container {
     gap: 0;
   }
@@ -99,7 +115,8 @@
     font-size: 15px;
   }
   .woman__container a {
-    padding: 7px 33px;
+    padding: 7px 20px;
+    font-weight: 300;
   }
   .woman__container img {
     width: 160px;

@@ -1,53 +1,74 @@
 [
     {
-        "id": 1,
-        "name": "Tom Ford Tobacco Vanille",
-        "image": "./img/man/1.jpeg"
+        "id": 12,
+        "name": "Givenchy Gentlmen",
+        "image": "./img/man/givenchyg.jpeg",
+        "price": 149,
+        "oldprice": 319
     },
     {
-        "id": 2,
-        "name": "Killian Angel's Share",
-        "image": "./img/man/2.jpeg",
-        "price": 189,
-        "oldprice": 529
+        "id": 11,
+        "name": "Creed Aventus",
+        "image": "./img/man/creed.jpeg",
+        "price": 309,
+        "oldprice": 549
     },
     {
-        "id": 3,
-        "name": "Dior Fahrenheit",
-        "image": "./img/man/3.jpeg",
-        "price": 129,
-        "oldprice": 299
-    },
-    {
-        "id": 4,
-        "name": "Giorgio Armani ACQUA DI GIO",
-        "image": "./img/man/4.jpeg"
-    },
-    {
-        "id": 5,
-        "name": "Giorgio Armani ACQUA DI GIO Detoilette",
-        "image": "./img/man/5.jpeg",
-        "price": 119,
-        "oldprice": 295
-    },
-    {
-        "id": 6,
-        "name": "YSL La Nuit DE L'HOMME",
-        "image": "./img/man/6.jpeg"
-    },
-    {
-        "id": 7,
-        "name": "Hugo BOSS",
-        "image": "./img/man/7.jpeg"
-    },
-    {
-        "id": 8,
-        "name": "Hugo BOSS",
-        "image": "./img/man/8.jpeg"
+        "id": 10,
+        "name": "Dior Sauvage",
+        "image": "./img/man/dior.jpeg",
+        "price": 159,
+        "oldprice": 320
     },
     {
         "id": 9,
-        "name": "Dior SAUVAGE",
-        "image": "./img/man/9.jpeg"
+        "name": "Emporio Armani Stronger with you",
+        "image": "./img/man/armani.jpeg",
+        "price": 149,
+        "oldprice": 298
+    },
+    {
+        "id": 8,
+        "name": "Emporio Armani Stronger With You Oud",
+        "image": "./img/man/armanioud.jpeg",
+        "price": 149,
+        "oldprice": 298
+    },
+    {
+        "id": 7,
+        "name": "Givenchy Gentlman",
+        "image": "./img/man/givenchy.jpeg",
+        "price": 149,
+        "oldprice": 319
+    },
+    {
+        "id": 6,
+        "name": "",
+        "image": "./img/man/6.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "",
+        "image": "./img/man/5.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "",
+        "image": "./img/man/4.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "",
+        "image": "./img/man/3.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "",
+        "image": "./img/man/2.jpeg"
+    },
+    {
+        "id": 1,
+        "name": "",
+        "image": "./img/man/1.jpeg"
     }
 ]

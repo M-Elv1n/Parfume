@@ -1,0 +1,14 @@
+#page-numbers .nex[disabled]:hover {
+  cursor: not-allowed;
+  color: red;
+}
+#page-numbers .nex {
+  cursor: pointer;
+}
+#page-numbers .prev[disabled]:hover {
+  cursor: not-allowed;
+  color: red;
+}
+#page-numbers .prev {
+  cursor: pointer;
+}/*# sourceMappingURL=button.css.map */

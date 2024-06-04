@@ -5,10 +5,20 @@
   text-decoration: none;
   list-style: none;
   font-style: normal;
+  font-family: "MontserratAce";
 }
 
 body {
   width: 100%;
+}
+
+:root {
+  --text-home-color: #FFFFFF;
+  --secondary-btn-color: #888;
+  --primary-product-discount-color: #ae2238;
+  --primary-product-btn-color: #FFFFFF;
+  --secondary-product-btn-color: #EDEDED;
+  --text-product-oldprc-color: #888;
 }
 
 .container {

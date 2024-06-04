@@ -1,14 +1,21 @@
 .home {
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  font-family: "Montserrat";
+}
+.home video {
+  height: 100%;
+  width: 100%;
+}
+.home p {
+  font-size: 31px;
 }
 .home .logo {
-  width: 89%;
-  height: 468px;
+  margin-top: 17px;
+  width: 62%;
+  height: 287px;
 }
 .home__title {
   display: flex;
@@ -18,63 +25,59 @@
 }
 .home a {
   padding: 10px 50px;
-  border: 1px solid black;
-  color: black;
-  font-size: 22px;
-  font-weight: bolder;
+  color: #ffffff;
+  background-color: var(--primary-btn-color);
+  font-weight: 600;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #ffffff;
 }
 .home a:hover {
   transition: 0.3s;
-  background-color: black;
+  background-color: var(--secondary-btn-color);
   color: white;
-}
-.home__celebrate {
-  width: 100%;
-  height: 400px;
-  background-image: url(../../../../public/img/home/celebrate.png);
-  background-position: center;
-}
-.home__celebrate img {
-  display: none;
 }
 .home__container {
   display: flex;
-  justify-content: space-between;
+  gap: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .home__container h2 {
   font-size: 60px;
   letter-spacing: 3px;
 }
 .home__women {
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
-  padding: 10px;
+  color: var(--text-home-color);
   width: 600px;
-  height: 600px;
-  background-image: url(../../../../public/img/home/woman.jpeg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 600px 685px;
+  height: 428px;
+  position: relative;
+}
+.home__women--container {
+  position: absolute;
+  z-index: 100;
+  top: 126px;
+  left: 193px;
+}
+.home__women--text {
+  padding-bottom: 16px;
 }
 .home__women--text span {
   font-size: 30px;
 }
 .home__men {
-  padding-left: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 30px;
-  padding: 10px;
-  background-image: url(../../../../public/img/home/man.jpeg);
-  background-repeat: no-repeat;
-  background-position: left;
-  background-size: 600px 685px;
+  color: var(--text-home-color);
   width: 600px;
-  height: 600px;
+  height: 428px;
+  position: relative;
+}
+.home__men--container {
+  position: absolute;
+  z-index: 100;
+  top: 126px;
+  left: 193px;
+}
+.home__men--text {
+  padding-bottom: 16px;
 }
 .home__men--text span {
   font-size: 30px;
@@ -86,6 +89,10 @@
   .home__women {
     width: 500px;
   }
+  .home__women--container {
+    top: 172px;
+    left: 153px;
+  }
 }
 @media screen and (max-width: 991px) {
   .home__men {
@@ -93,7 +100,10 @@
   }
   .home__women {
     width: 400px;
-    background-size: 404px 623px;
+  }
+  .home__women--container {
+    top: 147px;
+    left: 94px;
   }
   .home__container {
     justify-content: center;
@@ -102,21 +112,31 @@
 }
 @media screen and (max-width: 767px) {
   .home {
-    margin-top: 20px;
+    margin-top: 0;
   }
   .home__container {
     flex-direction: column;
   }
+  .home__container p,
+  .home__container span {
+    font-size: 27px;
+  }
   .home__men {
-    background-size: 492px 685px;
+    margin-top: 7px;
     width: 400px;
+    height: auto;
   }
   .home__women {
-    background-size: 431px 671px;
     width: 400px;
+    height: auto;
+  }
+  .home__women--container {
+    top: 7px;
   }
   .home .logo {
     width: 96%;
+    height: 224px;
+    margin-top: 9px;
   }
   .home__celebrate {
     background-image: none;
@@ -129,18 +149,29 @@
   }
 }
 @media screen and (max-width: 567px) {
+  .home {
+    overflow: hidden;
+  }
+  .home__container {
+    gap: 0;
+  }
   .home__men {
-    background-size: 452px 626px;
     width: 400px;
-    padding-left: 38px;
+  }
+  .home__men video {
+    height: 55%;
   }
   .home__women {
-    background-size: 402px 671px;
     width: 400px;
-    padding-left: 38px;
+  }
+  .home__women video {
+    height: 53%;
+  }
+  .home__women--container {
+    top: 0;
+    left: 22px;
   }
   .home .logo {
-    width: 100%;
-    height: 300px;
+    height: 197px;
   }
 }/*# sourceMappingURL=home.css.map */
