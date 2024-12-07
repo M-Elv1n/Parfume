@@ -3,7 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Home from "./pages/Home/Home";
 import Loader from "./components/Loader"; // Заглушка для Suspense
-import ConversionEvent from "./components/ConversionEvent"
 import "./css/styles.scss";
 
 
@@ -47,7 +46,6 @@ function App() {
     <div>
       <div>
         <GoogleTagManager />
-        <ConversionEvent />
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
