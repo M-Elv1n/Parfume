@@ -1,0 +1,25 @@
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px 0;
+  }
+  h1 {
+    color: #ffffff;
+  }
+  &__navbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    a {
+      font-size: 21px;
+      color: #ffffff;
+    }
+  }
+  @media screen and (max-width: (567px)){
+    &__container{
+      display: none;
+    }
+  }
+}

@@ -5,11 +5,13 @@ import Home from "./pages/Home/Home";
 import Loader from "./components/Loader"; // Заглушка для Suspense
 import "./css/styles.scss";
 
-
 const GoogleTagManager = () => (
   <Helmet>
     {/* Добавляем скрипт Google Tag Manager */}
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16807421415"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16807421415"
+    ></script>
     <script>
       {`
         window.dataLayer = window.dataLayer || [];
@@ -40,6 +42,8 @@ const AddProduct = React.lazy(() =>
 const AddProductWomen = React.lazy(() =>
   import("./pages/Home/Products/Woman/AddProductWoman")
 );
+
+const Games = React.lazy(() => import("./pages/Games/Games/Game"));
 
 function App() {
   return (
@@ -94,6 +98,14 @@ function App() {
           element={
             <Suspense fallback={<Loader />}>
               <AddProductWomen />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/1"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Games />
             </Suspense>
           }
         />

@@ -1,0 +1,38 @@
+.update {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  background: #101010;
+  border-radius: 22px;
+  align-items: center;
+  &__info {
+    padding: 2rem;
+    h1 {
+      font-size: 3rem;
+      line-height: 1;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      color: #9c9c9c;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media screen and (max-width: (1200px)) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (max-width: (767px)) {
+    &__info{
+      h1{
+        font-size: 2rem;
+      }
+    }
+  }
+}

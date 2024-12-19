@@ -1,0 +1,30 @@
+.circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 4px solid red; /* Красная рамка */
+  border-right-color: transparent; /* Для эффекта неполного круга */
+  border-radius: 50%; /* Круглая форма */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-38deg); /* Поворачиваем весь круг */
+}
+
+.text {
+  color: white; /* Цвет текста */
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  transform: rotate(38deg); /* Возвращаем текст обратно в нормальное положение */
+  z-index: 1; /* Устанавливаем текст выше границы */
+}
+
+.plus {
+  font-size: 18px;
+  position: absolute;
+  top: -10px;
+  right: -8px;
+  color: white;
+}
+
