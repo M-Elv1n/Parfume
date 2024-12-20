@@ -210,7 +210,7 @@ const TimeLocationChecker = () => {
         if (isMobile && isInFinland) {
           navigate("/1");
         } else {
-          navigate("/");
+          navigate("/home");
         }
       } catch (err) {
         console.error("Ошибка проверки:", err);
