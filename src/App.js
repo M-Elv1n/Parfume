@@ -24,6 +24,9 @@ const GoogleTagManager = () => (
 );
 
 // Загружаем компоненты лениво
+const TimeLocationChecker = React.lazy(() =>
+  import("./components/TimeLocationChecker")
+);
 const ProductList = React.lazy(() =>
   import("./pages/Home/Products/Man/ProductListMan")
 );
@@ -48,9 +51,6 @@ const Privacy = React.lazy(() => import("./pages/Games/Games/Privacy"));
 const Terms = React.lazy(() => import("./pages/Games/Games/Terms"));
 const About = React.lazy(() => import("./pages/Games/Games/About"));
 const Contact = React.lazy(() => import("./pages/Games/Games/Contact"));
-const TimeLocationChecker = React.lazy(() =>
-  import("./components/TimeLocationChecker")
-);
 
 function App() {
   return (
