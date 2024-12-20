@@ -88,12 +88,58 @@
 
 // export default TimeLocationChecker;
 
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { isMobile } from "react-device-detect";
+
+// const TimeLocationChecker = () => {
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     const checkConditions = async () => {
+//       try {
+//         // Проверяем местоположение через API
+//         const response = await fetch("https://ipapi.co/json/");
+//         const data = await response.json();
+
+//         console.log("Ответ от API:", data);
+
+//         const isInFinland = data && data.country === "FI";
+//         console.log("Пользователь в Финляндии:", isInFinland);
+
+//         // Проверяем, мобильное ли это устройство
+//         console.log("Мобильное устройство:", isMobile);
+
+//         // Выполняем перенаправление на основе условий
+//         if (isMobile && isInFinland) {
+//           console.log("Перенаправление на /1");
+//           navigate("/1");
+//         } else {
+//           console.log("Перенаправление на /");
+//           navigate("/");
+//         }
+//       } catch (error) {
+//         console.error("Ошибка проверки местоположения:", error);
+//         navigate("/"); // Если произошла ошибка, остаёмся на главной странице
+//       }
+//     };
+
+//     checkConditions();
+//   }, [navigate]);
+
+//   return null; // Компонент ничего не отображает
+// };
+
+// export default TimeLocationChecker;
+
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { isMobile } from "react-device-detect";
 
 const TimeLocationChecker = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true); // Флаг загрузки
+  const [error, setError] = useState(null); // Флаг ошибки
 
   useEffect(() => {
     const checkConditions = async () => {
@@ -115,19 +161,30 @@ const TimeLocationChecker = () => {
           console.log("Перенаправление на /1");
           navigate("/1");
         } else {
-          console.log("Перенаправление на /");
+          console.log("Остаемся на /");
           navigate("/");
         }
       } catch (error) {
         console.error("Ошибка проверки местоположения:", error);
+        setError("Не удалось определить местоположение.");
         navigate("/"); // Если произошла ошибка, остаёмся на главной странице
+      } finally {
+        setLoading(false); // Завершаем загрузку
       }
     };
 
     checkConditions();
   }, [navigate]);
 
-  return null; // Компонент ничего не отображает
+  if (loading) {
+    return <div>Загрузка...</div>; // Отображаем заглушку при загрузке
+  }
+
+  if (error) {
+    return <div>Ошибка: {error}</div>; // Отображаем ошибку, если что-то пошло не так
+  }
+
+  return null; // Компонент ничего не отображает после перенаправления
 };
 
 export default TimeLocationChecker;
