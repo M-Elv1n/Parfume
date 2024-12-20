@@ -39,6 +39,55 @@
 
 // export default TimeLocationChecker;
 
+// import React, { useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { isMobile } from "react-device-detect";
+
+// const TimeLocationChecker = () => {
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     const checkConditions = async () => {
+//       try {
+//         // Получаем текущее время в UTC+2 (Финляндия)
+//         const now = new Date();
+//         const hour = now.getUTCHours() + 2; // UTC+2 для Финляндии
+//         const isInTimeRange = hour >= 18 || hour < 2;
+
+//         console.log("Временной диапазон:", isInTimeRange);
+
+//         // Проверяем местоположение через API
+//         const response = await fetch("https://ipapi.co/json/");
+//         const data = await response.json();
+//         const isInFinland = data.country === "FI";
+
+//         console.log("Местоположение Финляндия:", isInFinland);
+
+//         // Проверяем тип устройства
+//         console.log("Мобильное устройство:", isMobile);
+
+//         // Логика перенаправления
+//         if (isMobile && isInTimeRange && isInFinland) {
+//           console.log("Перенаправление на /1");
+//           navigate("/1");
+//         } else {
+//           console.log("Перенаправление на /");
+//           navigate("/");
+//         }
+//       } catch (error) {
+//         console.error("Ошибка проверки:", error);
+//         navigate("/"); // Если произошла ошибка, перенаправляем на главную
+//       }
+//     };
+
+//     checkConditions();
+//   }, [navigate]);
+
+//   return null; // Компонент ничего не отображает
+// };
+
+// export default TimeLocationChecker;
+
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { isMobile } from "react-device-detect";
@@ -49,25 +98,20 @@ const TimeLocationChecker = () => {
   useEffect(() => {
     const checkConditions = async () => {
       try {
-        // Получаем текущее время в UTC+2 (Финляндия)
-        const now = new Date();
-        const hour = now.getUTCHours() + 2; // UTC+2 для Финляндии
-        const isInTimeRange = hour >= 18 || hour < 2;
-
-        console.log("Временной диапазон:", isInTimeRange);
-
         // Проверяем местоположение через API
         const response = await fetch("https://ipapi.co/json/");
         const data = await response.json();
-        const isInFinland = data.country === "FI";
 
-        console.log("Местоположение Финляндия:", isInFinland);
+        console.log("Ответ от API:", data);
 
-        // Проверяем тип устройства
+        const isInFinland = data && data.country === "FI";
+        console.log("Пользователь в Финляндии:", isInFinland);
+
+        // Проверяем, мобильное ли это устройство
         console.log("Мобильное устройство:", isMobile);
 
-        // Логика перенаправления
-        if (isMobile && isInTimeRange && isInFinland) {
+        // Выполняем перенаправление на основе условий
+        if (isMobile && isInFinland) {
           console.log("Перенаправление на /1");
           navigate("/1");
         } else {
@@ -75,8 +119,8 @@ const TimeLocationChecker = () => {
           navigate("/");
         }
       } catch (error) {
-        console.error("Ошибка проверки:", error);
-        navigate("/"); // Если произошла ошибка, перенаправляем на главную
+        console.error("Ошибка проверки местоположения:", error);
+        navigate("/"); // Если произошла ошибка, остаёмся на главной странице
       }
     };
 

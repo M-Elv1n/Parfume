@@ -60,7 +60,7 @@ function App() {
       </div>
       <Routes>
         <Route
-          path="/time-check"
+          path="/"
           element={
             <Suspense fallback={<Loader />}>
               <TimeLocationChecker />
