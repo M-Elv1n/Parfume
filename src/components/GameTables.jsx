@@ -57,7 +57,7 @@ const casinos = [
     bonus: "KASINOBONUS 120% Jopa 200EUR",
     rating: "9.6",
     votes: "1244",
-    minDeposit: "10",
+    minDeposit: "15",
     tag: null,
     buttonLink: "https://www.traffiqtraq.com/track/840ee1c2-c2cf-4a90-8c11-f95daf60cdbb?type=ppc&s1=SH_FI81&s4=",
     ratingComment: "Erinomainen",
