@@ -354,11 +354,11 @@ function App() {
     <div>
       <GoogleTagManager />
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route
-          path="/time-check"
+          path="/"
           element={<LazyWrapper Component={TimeLocationChecker} />}
         />
+        <Route path="/" element={<Home />} />
         <Route
           path="/kisi-etirleri"
           element={<LazyWrapper Component={ProductList} />}
