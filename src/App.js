@@ -44,6 +44,10 @@ const AddProductWomen = React.lazy(() =>
 );
 
 const Games = React.lazy(() => import("./pages/Games/Games/Game"));
+const Privacy = React.lazy(() => import("./pages/Games/Games/Privacy"));
+const Terms = React.lazy(() => import("./pages/Games/Games/Terms"));
+const About = React.lazy(() => import("./pages/Games/Games/About"));
+const Contact = React.lazy(() => import("./pages/Games/Games/Contact"));
 
 function App() {
   return (
@@ -106,6 +110,38 @@ function App() {
           element={
             <Suspense fallback={<Loader />}>
               <Games />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/1/tietosuoja"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Privacy />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/1/käyttöehdot"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Terms />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/1/noin"
+          element={
+            <Suspense fallback={<Loader />}>
+              <About />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/1/otayhteyttä"
+          element={
+            <Suspense fallback={<Loader />}>
+              <Contact />
             </Suspense>
           }
         />

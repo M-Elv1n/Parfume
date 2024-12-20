@@ -1,0 +1,25 @@
+.about {
+    background: #000000;
+    font-family: "Open Sans", serif;
+    &__text {
+      background: #ffffffff;
+      padding: 13px 0;
+      height: 50vh;
+      display: flex;
+      p {
+        font-size: 20px;
+      }
+    }
+    @media screen and (max-width: (767px)) {
+        &__text {
+            height: auto;
+        }
+      }
+    @media screen and (max-width: (567px)) {
+      &__text {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+  

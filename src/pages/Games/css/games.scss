@@ -1,4 +1,30 @@
-.games{
-    background: #000000;
-    font-family: "Open Sans", serif;
+.games {
+  background: #000000;
+  font-family: "Open Sans", serif;
+}
+
+.stars {
+  display: inline-flex;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.star {
+  position: relative;
+  color: #e4e5e9; /* Цвет пустой звезды */
+}
+
+.star.filled {
+  color: #ffc107; /* Полностью заполненная звезда */
+}
+
+.star.half {
+  background: linear-gradient(90deg, #ffc107 50%, #e4e5e9 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #e4e5e9; /* Резервный цвет */
+}
+
+.star.empty {
+  color: #e4e5e9; /* Пустая звезда */
 }

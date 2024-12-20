@@ -8,7 +8,7 @@ function GamesFooter() {
     <div className="footer container">
       <div className="footer__img">
         <h1>
-          Best Online <br /> Casino in Finland
+          Best Online <br /> Casinos in Finland
         </h1>
         <Link to="https://www.gambleaware.org/">
           <img src="../img/games/begamble.webp" alt="" />
@@ -37,7 +37,10 @@ function GamesFooter() {
         </p>
       </div>
       <div className="footer__info">
-        
+        <NavLink to="/1/noin">Noin</NavLink>
+        <NavLink to="/1/otayhteyttä">Ota yhteyttä</NavLink>
+        <NavLink to="/1/tietosuoja">Tietosuoja</NavLink>
+        <NavLink to="/1/käyttöehdot">Käyttöehdot</NavLink>
       </div>
     </div>
   );

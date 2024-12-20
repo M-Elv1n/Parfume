@@ -9,7 +9,42 @@ const GamesCard = ({
   minDeposit,
   tag,
   buttonLink,
+  ratingComment,
 }) => {
+  const renderStars = () => {
+    if (rating > 9.7) {
+      return (
+        <>
+          <span className="star filled">★</span>
+          <span className="star filled">★</span>
+          <span className="star filled">★</span>
+          <span className="star filled">★</span>
+          <span className="star filled">★</span>
+        </>
+      );
+    } else if (rating <= 9.7 && rating >= 9.5) {
+      return (
+        <>
+          <span className="star filled">★</span>
+          <span className="star filled">★</span>
+          <span className="star filled">★</span>
+          <span className="star filled">★</span>
+          <span className="star half">★</span>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <span className="star filled">★</span>
+          <span className="star filled">★</span>
+          <span className="star filled">★</span>
+          <span className="star filled">★</span>
+          <span className="star empty">☆</span>
+        </>
+      );
+    }
+  };
+
   return (
     <div className="casino-card container">
       {/* Тег (бейдж) */}
@@ -18,7 +53,7 @@ const GamesCard = ({
       <div className="casino-card-content">
         {/* Логотип */}
         <div className="casino-logo">
-          <img src="../img/games/ssl-secure.svg" alt="Kasinon logo" />
+          <img src={logo} alt="Kasinon logo" />
         </div>
 
         {/* Бонус */}
@@ -30,16 +65,16 @@ const GamesCard = ({
         {/* Рейтинг */}
         <div className="casino-rating">
           <p className="rating">
-            <span>⭐⭐⭐⭐⭐</span>
             <h1>{rating}</h1> Arvosana ({votes}) Upea
-            <span>Äänestäthän</span>
+            <div className="stars">{renderStars()}</div>
+            <span>{ratingComment}</span>
           </p>
         </div>
 
         {/* Минимальный депозит */}
         <div className="casino-min-deposit">
           <h3>Minimitalletus</h3>
-          <h1>{minDeposit} $</h1>
+          <h1>{minDeposit} EUR</h1>
         </div>
 
         {/* Кнопка */}
