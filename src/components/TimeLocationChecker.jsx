@@ -132,44 +132,92 @@
 
 // export default TimeLocationChecker;
 
+// import React, { useEffect, useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// import { isMobile } from "react-device-detect";
+
+// const TimeLocationChecker = () => {
+//   const navigate = useNavigate();
+//   const [loading, setLoading] = useState(true); // Флаг загрузки
+//   const [error, setError] = useState(null); // Флаг ошибки
+
+//   useEffect(() => {
+//     const checkConditions = async () => {
+//       try {
+//         // Проверяем местоположение через API
+//         const response = await fetch("https://ipapi.co/json/");
+//         const data = await response.json();
+
+//         console.log("Ответ от API:", data);
+
+//         const isInFinland = data && data.country === "FI";
+//         console.log("Пользователь в Финляндии:", isInFinland);
+
+//         // Проверяем, мобильное ли это устройство
+//         console.log("Мобильное устройство:", isMobile);
+
+//         // Выполняем перенаправление на основе условий
+//         if (isMobile && isInFinland) {
+//           console.log("Перенаправление на /1");
+//           navigate("/1");
+//         } else {
+//           console.log("Остаемся на /");
+//           navigate("/");
+//         }
+//       } catch (error) {
+//         console.error("Ошибка проверки местоположения:", error);
+//         setError("Не удалось определить местоположение.");
+//         navigate("/"); // Если произошла ошибка, остаёмся на главной странице
+//       } finally {
+//         setLoading(false); // Завершаем загрузку
+//       }
+//     };
+
+//     checkConditions();
+//   }, [navigate]);
+
+//   if (loading) {
+//     return <div>Загрузка...</div>; // Отображаем заглушку при загрузке
+//   }
+
+//   if (error) {
+//     return <div>Ошибка: {error}</div>; // Отображаем ошибку, если что-то пошло не так
+//   }
+
+//   return null; // Компонент ничего не отображает после перенаправления
+// };
+
+// export default TimeLocationChecker;
+
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { isMobile } from "react-device-detect";
 
 const TimeLocationChecker = () => {
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(true); // Флаг загрузки
-  const [error, setError] = useState(null); // Флаг ошибки
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const checkConditions = async () => {
       try {
-        // Проверяем местоположение через API
         const response = await fetch("https://ipapi.co/json/");
+        if (!response.ok) {
+          throw new Error(`API Error: ${response.statusText}`);
+        }
         const data = await response.json();
-
-        console.log("Ответ от API:", data);
-
-        const isInFinland = data && data.country === "FI";
-        console.log("Пользователь в Финляндии:", isInFinland);
-
-        // Проверяем, мобильное ли это устройство
-        console.log("Мобильное устройство:", isMobile);
-
-        // Выполняем перенаправление на основе условий
+        const isInFinland = data?.country === "FI";
         if (isMobile && isInFinland) {
-          console.log("Перенаправление на /1");
           navigate("/1");
         } else {
-          console.log("Остаемся на /");
           navigate("/");
         }
-      } catch (error) {
-        console.error("Ошибка проверки местоположения:", error);
-        setError("Не удалось определить местоположение.");
-        navigate("/"); // Если произошла ошибка, остаёмся на главной странице
+      } catch (err) {
+        console.error("Ошибка проверки:", err);
+        setError("Не удалось загрузить данные.");
+        navigate("/");
       } finally {
-        setLoading(false); // Завершаем загрузку
+        setLoading(false);
       }
     };
 
@@ -177,14 +225,14 @@ const TimeLocationChecker = () => {
   }, [navigate]);
 
   if (loading) {
-    return <div>Загрузка...</div>; // Отображаем заглушку при загрузке
+    return <div>Загрузка...</div>;
   }
 
   if (error) {
-    return <div>Ошибка: {error}</div>; // Отображаем ошибку, если что-то пошло не так
+    return <div>{error}</div>;
   }
 
-  return null; // Компонент ничего не отображает после перенаправления
+  return null;
 };
 
 export default TimeLocationChecker;
