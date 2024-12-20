@@ -48,6 +48,9 @@ const Privacy = React.lazy(() => import("./pages/Games/Games/Privacy"));
 const Terms = React.lazy(() => import("./pages/Games/Games/Terms"));
 const About = React.lazy(() => import("./pages/Games/Games/About"));
 const Contact = React.lazy(() => import("./pages/Games/Games/Contact"));
+const TimeLocationChecker = React.lazy(() =>
+  import("./components/TimeLocationChecker")
+);
 
 function App() {
   return (
@@ -56,6 +59,14 @@ function App() {
         <GoogleTagManager />
       </div>
       <Routes>
+        <Route
+          path="/time-check"
+          element={
+            <Suspense fallback={<Loader />}>
+              <TimeLocationChecker />
+            </Suspense>
+          }
+        />
         <Route path="/" element={<Home />} />
         <Route
           path="/kisi-etirleri"
