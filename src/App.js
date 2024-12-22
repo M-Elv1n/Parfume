@@ -322,9 +322,9 @@ const LazyWrapper = ({ Component }) => (
 );
 
 // Ленивые компоненты
-// const TimeLocationChecker = React.lazy(() =>
-//   import("./components/TimeLocationChecker")
-// );
+const TimeLocationChecker = React.lazy(() =>
+  import("./components/TimeLocationChecker")
+);
 const ProductList = React.lazy(() =>
   import("./pages/Home/Products/Man/ProductListMan")
 );
@@ -354,11 +354,11 @@ function App() {
     <div>
       <GoogleTagManager />
       <Routes>
-        {/* <Route
+        <Route
           path="/"
           element={<LazyWrapper Component={TimeLocationChecker} />}
-        /> */}
-        <Route path="/" element={<Home />} />
+        />
+        <Route path="/home" element={<Home />} />
         <Route
           path="/kisi-etirleri"
           element={<LazyWrapper Component={ProductList} />}
