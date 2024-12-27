@@ -63,11 +63,11 @@ function App() {
     <div>
       <GoogleTagManager />
       <Routes>
-        <Route
+        {/* <Route
           path="/"
           element={<LazyWrapper Component={TimeLocationChecker} />}
-        />
-        <Route path="/home" element={<Home />} />
+        /> */}
+        <Route path="/" element={<Home />} />
         <Route
           path="/kisi-etirleri"
           element={<LazyWrapper Component={ProductList} />}
