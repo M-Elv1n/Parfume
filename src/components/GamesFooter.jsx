@@ -2,14 +2,13 @@ import React from "react";
 import Circle from "./Circle";
 import "../pages/Games/css/gamesfooter.scss";
 import { Link, NavLink } from "react-router-dom";
+import Logo from "../pages/logoC1.svg";
 
 function GamesFooter() {
   return (
-    <div className="footer container">
-      <div className="footer__img">
-        <h1>
-          Best Online <br /> Casinos in Finland
-        </h1>
+    <div className="footergame container">
+      <div className="footergame__img">
+        <img src={Logo} alt="" />
         <Link to="https://www.gambleaware.org/">
           <img src="../img/games/begamble.webp" alt="" />
         </Link>
@@ -17,7 +16,7 @@ function GamesFooter() {
         <img src="../img/games/e-cogra.webp" alt="" />
         <img src="../img/games/ssl-secure.svg" alt="" />
       </div>
-      <div className="footer__text">
+      <div className="footergame__text">
         <p>Tekijänoikeus © Kaikki oikeudet pidätetään</p>
         <p>
           Jos sinulla tai jollain tuntemallasi on peliongelma ja haluat apua,
@@ -36,7 +35,7 @@ function GamesFooter() {
           sellaisina.
         </p>
       </div>
-      <div className="footer__info">
+      <div className="footergame__info">
         <NavLink to="/1/noin">Noin</NavLink>
         <NavLink to="/1/otayhteyttä">Ota yhteyttä</NavLink>
         <NavLink to="/1/tietosuoja">Tietosuoja</NavLink>

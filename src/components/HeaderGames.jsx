@@ -1,22 +1,22 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../pages/Games/css/headergames.scss";
-import BurgerMenu from "./BurgerMenu";
+import Logo from "../pages/logoC1.svg";
+import BurgerMenu from "./BurgerMenuGame";
 
 function HeaderGames() {
   return (
-    <div className="header container">
-      <div className="header__container">
+    <div className="headergame container">
+      <div className="headergame__container">
         <div>
-          {/* <h1>
-            Best Online <br /> Casino in Finland
-          </h1> */}
+          <img src={Logo} alt="" />
         </div>
-        <li className="header__navbar">
+        <li className="headergame__navbar">
           <NavLink to="/1">Etusivu</NavLink>
           <NavLink to="/1/tietosuoja">Tietosuoja</NavLink>
           <NavLink to="/1/käyttöehdot">Käyttöehdot</NavLink>
         </li>
+        <BurgerMenu />
       </div>
     </div>
   );

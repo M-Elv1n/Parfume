@@ -1,8 +1,8 @@
-.header {
+.headergame {
   &__container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 22px 0;
   }
   h1 {
@@ -18,8 +18,13 @@
       color: #ffffff;
     }
   }
-  @media screen and (max-width: (567px)){
-    &__container{
+  @media screen and (max-width: (767px)) {
+    &__navbar {
+      display: none;
+    }
+  }
+  @media screen and (max-width: (567px)) {
+    &__container {
     }
   }
 }

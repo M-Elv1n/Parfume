@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Home from "./pages/Home/Home";
 import Loader from "./components/Loader"; // Заглушка для Suspense
@@ -89,7 +89,7 @@ function App() {
           path="/addwomen"
           element={<LazyWrapper Component={AddProductWomen} />}
         />
-        <Route path="/1" element={<LazyWrapper Component={Games} />} />
+        {/* <Route path="/1" element={<LazyWrapper Component={Games} />} />
         <Route
           path="/1/tietosuoja"
           element={<LazyWrapper Component={Privacy} />}
@@ -102,7 +102,9 @@ function App() {
         <Route
           path="/1/otayhteyttä"
           element={<LazyWrapper Component={Contact} />}
-        />
+        /> */}
+
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   );
